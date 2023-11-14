@@ -11,23 +11,24 @@ namespace ReviewApp_Porgramming_Assessment
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
-        {
+        {   
             newReview.GetUsername(txbUsername.Text);
             newReview.GetComapnyName(txbCompanyName.Text);
-            newReview.GetStarRating(Convert.ToSingle(txbStarReview.Text));
+            //newReview.GetStarRating(Convert.ToSingle(txbStarReview.Text));
             newReview.GetWrittenReview(txbWrittenReview.Text);
 
-            ClearAllTextBoxes();
+            ClearTextBoxes();
         }
 
-        private void ClearAllTextBoxes()
+        private void ClearTextBoxes()
         {
             txbUsername.Clear();
             txbCompanyName.Clear();
             txbStarReview.Clear();
             txbWrittenReview.Clear();
         }
-
-        
     }
 }
+
+
+//make a repsonsive star thing https://www.youtube.com/watch?v=V0gccjef5_E&ab_channel=AaricAaiden

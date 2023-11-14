@@ -20,6 +20,7 @@
         starRating = newStarRating;
     }
 
+
     public void GetWrittenReview(string newWrittenReview)
     {
         writtenReview = newWrittenReview;
