@@ -34,14 +34,14 @@
             this.txbCompanyName = new System.Windows.Forms.TextBox();
             this.lblStarReview = new System.Windows.Forms.Label();
             this.txbStarReview = new System.Windows.Forms.TextBox();
-            this.lblWritenReview = new System.Windows.Forms.Label();
-            this.txbWritenReview = new System.Windows.Forms.TextBox();
+            this.lblWrittenReview = new System.Windows.Forms.Label();
+            this.txbWrittenReview = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbUsername
             // 
-            this.txbUsername.Location = new System.Drawing.Point(132, 55);
+            this.txbUsername.Location = new System.Drawing.Point(129, 21);
             this.txbUsername.Name = "txbUsername";
             this.txbUsername.Size = new System.Drawing.Size(216, 27);
             this.txbUsername.TabIndex = 0;
@@ -49,7 +49,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(12, 55);
+            this.lblUsername.Location = new System.Drawing.Point(9, 21);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(73, 20);
             this.lblUsername.TabIndex = 1;
@@ -58,7 +58,7 @@
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
-            this.lblCompanyName.Location = new System.Drawing.Point(12, 116);
+            this.lblCompanyName.Location = new System.Drawing.Point(9, 82);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(111, 20);
             this.lblCompanyName.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             // txbCompanyName
             // 
-            this.txbCompanyName.Location = new System.Drawing.Point(132, 116);
+            this.txbCompanyName.Location = new System.Drawing.Point(129, 82);
             this.txbCompanyName.Name = "txbCompanyName";
             this.txbCompanyName.Size = new System.Drawing.Size(216, 27);
             this.txbCompanyName.TabIndex = 3;
@@ -74,7 +74,7 @@
             // lblStarReview
             // 
             this.lblStarReview.AutoSize = true;
-            this.lblStarReview.Location = new System.Drawing.Point(12, 180);
+            this.lblStarReview.Location = new System.Drawing.Point(9, 146);
             this.lblStarReview.Name = "lblStarReview";
             this.lblStarReview.Size = new System.Drawing.Size(80, 20);
             this.lblStarReview.TabIndex = 4;
@@ -82,31 +82,31 @@
             // 
             // txbStarReview
             // 
-            this.txbStarReview.Location = new System.Drawing.Point(132, 177);
+            this.txbStarReview.Location = new System.Drawing.Point(129, 143);
             this.txbStarReview.Name = "txbStarReview";
             this.txbStarReview.Size = new System.Drawing.Size(216, 27);
             this.txbStarReview.TabIndex = 5;
             // 
-            // lblWritenReview
+            // lblWrittenReview
             // 
-            this.lblWritenReview.AutoSize = true;
-            this.lblWritenReview.Location = new System.Drawing.Point(12, 264);
-            this.lblWritenReview.Name = "lblWritenReview";
-            this.lblWritenReview.Size = new System.Drawing.Size(97, 20);
-            this.lblWritenReview.TabIndex = 6;
-            this.lblWritenReview.Text = "writen review";
+            this.lblWrittenReview.AutoSize = true;
+            this.lblWrittenReview.Location = new System.Drawing.Point(9, 230);
+            this.lblWrittenReview.Name = "lblWrittenReview";
+            this.lblWrittenReview.Size = new System.Drawing.Size(102, 20);
+            this.lblWrittenReview.TabIndex = 6;
+            this.lblWrittenReview.Text = "written review";
             // 
-            // txbWritenReview
+            // txbWrittenReview
             // 
-            this.txbWritenReview.Location = new System.Drawing.Point(132, 257);
-            this.txbWritenReview.Multiline = true;
-            this.txbWritenReview.Name = "txbWritenReview";
-            this.txbWritenReview.Size = new System.Drawing.Size(216, 162);
-            this.txbWritenReview.TabIndex = 7;
+            this.txbWrittenReview.Location = new System.Drawing.Point(129, 223);
+            this.txbWrittenReview.Multiline = true;
+            this.txbWrittenReview.Name = "txbWrittenReview";
+            this.txbWrittenReview.Size = new System.Drawing.Size(216, 162);
+            this.txbWrittenReview.TabIndex = 7;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(12, 447);
+            this.btnSubmit.Location = new System.Drawing.Point(9, 413);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(333, 67);
             this.btnSubmit.TabIndex = 8;
@@ -117,10 +117,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 527);
+            this.ClientSize = new System.Drawing.Size(357, 498);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.txbWritenReview);
-            this.Controls.Add(this.lblWritenReview);
+            this.Controls.Add(this.txbWrittenReview);
+            this.Controls.Add(this.lblWrittenReview);
             this.Controls.Add(this.txbStarReview);
             this.Controls.Add(this.lblStarReview);
             this.Controls.Add(this.txbCompanyName);
@@ -142,8 +142,8 @@
         private TextBox txbCompanyName;
         private Label lblStarReview;
         private TextBox txbStarReview;
-        private Label lblWritenReview;
-        private TextBox txbWritenReview;
+        private Label lblWrittenReview;
+        private TextBox txbWrittenReview;
         private Button btnSubmit;
     }
 }
