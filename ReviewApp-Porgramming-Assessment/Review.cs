@@ -2,5 +2,6 @@
 {
     private string usernameOfReviewer;
     private string companyName;
-    private string 
+    private float starRating;
+    private string writtenReview;
 }
