@@ -108,10 +108,11 @@
             // 
             this.btnSubmit.Location = new System.Drawing.Point(9, 413);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(333, 67);
+            this.btnSubmit.Size = new System.Drawing.Size(336, 67);
             this.btnSubmit.TabIndex = 8;
             this.btnSubmit.Text = "Submit review";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 

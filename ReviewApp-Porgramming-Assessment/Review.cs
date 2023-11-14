@@ -5,23 +5,23 @@
     private float starRating;
     private string writtenReview;
 
-    public void GetUsername()
+    public void GetUsername(string username)
     {
-
+        usernameOfReviewer = username;
     }
 
-    public void GetComapnyName()
+    public void GetComapnyName(string nameOfCompany)
     {
-
+        companyName = nameOfCompany;
     }
 
-    public void GetStarRating()
+    public void GetStarRating(float newStarRating)
     {
-
+        starRating = newStarRating;
     }
 
-    public void GetWrittenReview()
+    public void GetWrittenReview(string newWrittenReview)
     {
-
+        writtenReview = newWrittenReview;
     }
 }
