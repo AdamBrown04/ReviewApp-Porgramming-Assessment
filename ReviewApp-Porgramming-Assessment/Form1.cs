@@ -16,6 +16,18 @@ namespace ReviewApp_Porgramming_Assessment
             newReview.GetComapnyName(txbCompanyName.Text);
             newReview.GetStarRating(Convert.ToSingle(txbStarReview.Text));
             newReview.GetWrittenReview(txbWrittenReview.Text);
+
+            ClearAllTextBoxes();
         }
+
+        private void ClearAllTextBoxes()
+        {
+            txbUsername.Clear();
+            txbCompanyName.Clear();
+            txbStarReview.Clear();
+            txbWrittenReview.Clear();
+        }
+
+        
     }
 }
