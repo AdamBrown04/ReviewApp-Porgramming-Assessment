@@ -15,6 +15,11 @@
         companyName = nameOfCompany;
     }
 
+    public void GetStarRating (int ratingFromUser)
+    {
+        starRating = ratingFromUser;
+    }
+
     public void GetWrittenReview(string newWrittenReview)
     {
         writtenReview = newWrittenReview;

@@ -6,6 +6,7 @@ namespace ReviewApp_Porgramming_Assessment
     {
 
         Review newReview = new Review();
+        int userStarReview;
 
         public Form1()
         {
@@ -16,9 +17,11 @@ namespace ReviewApp_Porgramming_Assessment
         {   
             newReview.GetUsername(txbUsername.Text);
             newReview.GetComapnyName(txbCompanyName.Text);
+            newReview.GetStarRating(userStarReview);
             newReview.GetWrittenReview(txbWrittenReview.Text);
 
             ClearTextBoxes();
+            ClearStarBoxes();
         }
 
         private void ClearTextBoxes()
@@ -28,6 +31,15 @@ namespace ReviewApp_Porgramming_Assessment
             txbWrittenReview.Clear();
         }
 
+        private void ClearStarBoxes()
+        {
+            pcbStarOne.Image = Resources.whiteStar;
+            pcbStarTwo.Image = Resources.whiteStar;
+            pcbStarThree.Image = Resources.whiteStar;
+            pcbStarFour.Image = Resources.whiteStar;
+            pcbStarFive.Image = Resources.whiteStar;
+        }
+
         private void pcbStarFive_Click(object sender, EventArgs e)
         {
             pcbStarOne.Image = Resources.yellowStar;
@@ -35,6 +47,8 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarThree.Image = Resources.yellowStar;
             pcbStarFour.Image = Resources.yellowStar;
             pcbStarFive.Image = Resources.yellowStar;
+
+            userStarReview = 5;
         }
 
         private void pcbStarFour_Click(object sender, EventArgs e)
@@ -45,6 +59,8 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarFour.Image = Resources.yellowStar;
 
             pcbStarFive.Image = Resources.whiteStar;
+
+            userStarReview = 4;
         }
 
         private void pcbStarThree_Click(object sender, EventArgs e)
@@ -55,6 +71,8 @@ namespace ReviewApp_Porgramming_Assessment
 
             pcbStarFour.Image = Resources.whiteStar;
             pcbStarFive.Image = Resources.whiteStar;
+
+            userStarReview = 3;
         }
 
         private void pcbStarTwo_Click(object sender, EventArgs e)
@@ -65,6 +83,8 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarThree.Image = Resources.whiteStar;
             pcbStarFour.Image = Resources.whiteStar;
             pcbStarFive.Image = Resources.whiteStar;
+
+            userStarReview = 2;
         }
 
         private void pcbStarOne_Click(object sender, EventArgs e)
@@ -75,6 +95,8 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarThree.Image = Resources.whiteStar;
             pcbStarFour.Image = Resources.whiteStar;
             pcbStarFive.Image = Resources.whiteStar;
+
+            userStarReview = 1;
         }
     }
 }
