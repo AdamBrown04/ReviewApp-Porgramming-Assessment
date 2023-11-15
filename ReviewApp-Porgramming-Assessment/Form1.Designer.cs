@@ -33,10 +33,19 @@
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.txbCompanyName = new System.Windows.Forms.TextBox();
             this.lblStarReview = new System.Windows.Forms.Label();
-            this.txbStarReview = new System.Windows.Forms.TextBox();
             this.lblWrittenReview = new System.Windows.Forms.Label();
             this.txbWrittenReview = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.pcbStarFive = new System.Windows.Forms.PictureBox();
+            this.pcbStarFour = new System.Windows.Forms.PictureBox();
+            this.pcbStarThree = new System.Windows.Forms.PictureBox();
+            this.pcbStarTwo = new System.Windows.Forms.PictureBox();
+            this.pcbStarOne = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarFive)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarFour)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarThree)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarTwo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarOne)).BeginInit();
             this.SuspendLayout();
             // 
             // txbUsername
@@ -80,13 +89,6 @@
             this.lblStarReview.TabIndex = 4;
             this.lblStarReview.Text = "star review";
             // 
-            // txbStarReview
-            // 
-            this.txbStarReview.Location = new System.Drawing.Point(129, 143);
-            this.txbStarReview.Name = "txbStarReview";
-            this.txbStarReview.Size = new System.Drawing.Size(216, 27);
-            this.txbStarReview.TabIndex = 5;
-            // 
             // lblWrittenReview
             // 
             this.lblWrittenReview.AutoSize = true;
@@ -114,15 +116,74 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // pcbStarFive
+            // 
+            this.pcbStarFive.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
+            this.pcbStarFive.Location = new System.Drawing.Point(305, 146);
+            this.pcbStarFive.Name = "pcbStarFive";
+            this.pcbStarFive.Size = new System.Drawing.Size(40, 41);
+            this.pcbStarFive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbStarFive.TabIndex = 13;
+            this.pcbStarFive.TabStop = false;
+            this.pcbStarFive.Click += new System.EventHandler(this.pcbStarFive_Click);
+            // 
+            // pcbStarFour
+            // 
+            this.pcbStarFour.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
+            this.pcbStarFour.Location = new System.Drawing.Point(259, 146);
+            this.pcbStarFour.Name = "pcbStarFour";
+            this.pcbStarFour.Size = new System.Drawing.Size(40, 41);
+            this.pcbStarFour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbStarFour.TabIndex = 14;
+            this.pcbStarFour.TabStop = false;
+            this.pcbStarFour.Click += new System.EventHandler(this.pcbStarFour_Click);
+            // 
+            // pcbStarThree
+            // 
+            this.pcbStarThree.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
+            this.pcbStarThree.Location = new System.Drawing.Point(213, 146);
+            this.pcbStarThree.Name = "pcbStarThree";
+            this.pcbStarThree.Size = new System.Drawing.Size(40, 41);
+            this.pcbStarThree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbStarThree.TabIndex = 15;
+            this.pcbStarThree.TabStop = false;
+            this.pcbStarThree.Click += new System.EventHandler(this.pcbStarThree_Click);
+            // 
+            // pcbStarTwo
+            // 
+            this.pcbStarTwo.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
+            this.pcbStarTwo.Location = new System.Drawing.Point(167, 146);
+            this.pcbStarTwo.Name = "pcbStarTwo";
+            this.pcbStarTwo.Size = new System.Drawing.Size(40, 41);
+            this.pcbStarTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbStarTwo.TabIndex = 16;
+            this.pcbStarTwo.TabStop = false;
+            this.pcbStarTwo.Click += new System.EventHandler(this.pcbStarTwo_Click);
+            // 
+            // pcbStarOne
+            // 
+            this.pcbStarOne.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
+            this.pcbStarOne.Location = new System.Drawing.Point(121, 146);
+            this.pcbStarOne.Name = "pcbStarOne";
+            this.pcbStarOne.Size = new System.Drawing.Size(40, 41);
+            this.pcbStarOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbStarOne.TabIndex = 17;
+            this.pcbStarOne.TabStop = false;
+            this.pcbStarOne.Click += new System.EventHandler(this.pcbStarOne_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 498);
+            this.Controls.Add(this.pcbStarOne);
+            this.Controls.Add(this.pcbStarTwo);
+            this.Controls.Add(this.pcbStarThree);
+            this.Controls.Add(this.pcbStarFour);
+            this.Controls.Add(this.pcbStarFive);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txbWrittenReview);
             this.Controls.Add(this.lblWrittenReview);
-            this.Controls.Add(this.txbStarReview);
             this.Controls.Add(this.lblStarReview);
             this.Controls.Add(this.txbCompanyName);
             this.Controls.Add(this.lblCompanyName);
@@ -130,6 +191,11 @@
             this.Controls.Add(this.txbUsername);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarFive)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarFour)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarThree)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarTwo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStarOne)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,9 +208,13 @@
         private Label lblCompanyName;
         private TextBox txbCompanyName;
         private Label lblStarReview;
-        private TextBox txbStarReview;
         private Label lblWrittenReview;
         private TextBox txbWrittenReview;
         private Button btnSubmit;
+        private PictureBox pcbStarFive;
+        private PictureBox pcbStarFour;
+        private PictureBox pcbStarThree;
+        private PictureBox pcbStarTwo;
+        private PictureBox pcbStarOne;
     }
 }

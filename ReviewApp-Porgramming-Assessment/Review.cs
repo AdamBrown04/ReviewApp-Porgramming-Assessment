@@ -2,7 +2,7 @@
 {
     private string usernameOfReviewer;
     private string companyName;
-    private float starRating;
+    private int starRating;
     private string writtenReview;
 
     public void GetUsername(string username)
@@ -14,12 +14,6 @@
     {
         companyName = nameOfCompany;
     }
-
-    public void GetStarRating(float newStarRating)
-    {
-        starRating = newStarRating;
-    }
-
 
     public void GetWrittenReview(string newWrittenReview)
     {

@@ -1,3 +1,5 @@
+using ReviewApp_Porgramming_Assessment.Properties;
+
 namespace ReviewApp_Porgramming_Assessment
 {
     public partial class Form1 : Form
@@ -14,7 +16,6 @@ namespace ReviewApp_Porgramming_Assessment
         {   
             newReview.GetUsername(txbUsername.Text);
             newReview.GetComapnyName(txbCompanyName.Text);
-            //newReview.GetStarRating(Convert.ToSingle(txbStarReview.Text));
             newReview.GetWrittenReview(txbWrittenReview.Text);
 
             ClearTextBoxes();
@@ -24,8 +25,56 @@ namespace ReviewApp_Porgramming_Assessment
         {
             txbUsername.Clear();
             txbCompanyName.Clear();
-            txbStarReview.Clear();
             txbWrittenReview.Clear();
+        }
+
+        private void pcbStarFive_Click(object sender, EventArgs e)
+        {
+            pcbStarOne.Image = Resources.yellowStar;
+            pcbStarTwo.Image = Resources.yellowStar;
+            pcbStarThree.Image = Resources.yellowStar;
+            pcbStarFour.Image = Resources.yellowStar;
+            pcbStarFive.Image = Resources.yellowStar;
+        }
+
+        private void pcbStarFour_Click(object sender, EventArgs e)
+        {
+            pcbStarOne.Image = Resources.yellowStar;
+            pcbStarTwo.Image = Resources.yellowStar;
+            pcbStarThree.Image = Resources.yellowStar;
+            pcbStarFour.Image = Resources.yellowStar;
+
+            pcbStarFive.Image = Resources.whiteStar;
+        }
+
+        private void pcbStarThree_Click(object sender, EventArgs e)
+        {
+            pcbStarOne.Image = Resources.yellowStar;
+            pcbStarTwo.Image = Resources.yellowStar;
+            pcbStarThree.Image = Resources.yellowStar;
+
+            pcbStarFour.Image = Resources.whiteStar;
+            pcbStarFive.Image = Resources.whiteStar;
+        }
+
+        private void pcbStarTwo_Click(object sender, EventArgs e)
+        {
+            pcbStarOne.Image = Resources.yellowStar;
+            pcbStarTwo.Image = Resources.yellowStar;
+
+            pcbStarThree.Image = Resources.whiteStar;
+            pcbStarFour.Image = Resources.whiteStar;
+            pcbStarFive.Image = Resources.whiteStar;
+        }
+
+        private void pcbStarOne_Click(object sender, EventArgs e)
+        {
+            pcbStarOne.Image = Resources.yellowStar;
+
+            pcbStarTwo.Image = Resources.whiteStar;
+            pcbStarThree.Image = Resources.whiteStar;
+            pcbStarFour.Image = Resources.whiteStar;
+            pcbStarFive.Image = Resources.whiteStar;
         }
     }
 }
