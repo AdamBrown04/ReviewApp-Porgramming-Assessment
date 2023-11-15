@@ -15,17 +15,25 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Review newReview = new Review();
+            if(userStarReview > 0)
+            {
+                Review newReview = new Review();
 
-            newReview.GetUsername(txbUsername.Text);
-            newReview.GetComapnyName(txbCompanyName.Text);
-            newReview.GetStarRating(userStarReview);
-            newReview.GetWrittenReview(txbWrittenReview.Text);
+                newReview.GetUsername(txbUsername.Text);
+                newReview.GetComapnyName(txbCompanyName.Text);
+                newReview.GetStarRating(userStarReview);
+                newReview.GetWrittenReview(txbWrittenReview.Text);
 
-            currentReview = newReview;
+                currentReview = newReview;
+
+                ClearTextBoxes();
+                ClearStarBoxes();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a star rating");
+            }
             
-            ClearTextBoxes();
-            ClearStarBoxes();
         }
 
         private void ClearTextBoxes()
@@ -134,9 +142,6 @@ namespace ReviewApp_Porgramming_Assessment
                     pcbStarThree.Image = Resources.yellowStar;
                     pcbStarFour.Image = Resources.yellowStar;
                     pcbStarFive.Image = Resources.yellowStar;
-                    break;
-                default:
-
                     break;
             }
 
