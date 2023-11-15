@@ -24,4 +24,24 @@
     {
         writtenReview = newWrittenReview;
     }
+
+    public string ViewUsername()
+    {
+        return usernameOfReviewer;
+    }
+
+    public string ViewCompanyName()
+    {
+        return companyName;
+    }
+
+    public int ViewStarRating()
+    {
+        return starRating;
+    }
+
+    public string ViewWrittenReview()
+    {
+        return writtenReview;
+    }
 }

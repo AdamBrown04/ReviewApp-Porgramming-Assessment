@@ -4,9 +4,9 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class Form1 : Form
     {
-
-        Review newReview = new Review();
-        int userStarReview;
+        Review currentReview;
+        Review viewReview = new Review();
+        int userStarReview = 0;
 
         public Form1()
         {
@@ -14,12 +14,16 @@ namespace ReviewApp_Porgramming_Assessment
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
-        {   
+        {
+            Review newReview = new Review();
+
             newReview.GetUsername(txbUsername.Text);
             newReview.GetComapnyName(txbCompanyName.Text);
             newReview.GetStarRating(userStarReview);
             newReview.GetWrittenReview(txbWrittenReview.Text);
 
+            currentReview = newReview;
+            
             ClearTextBoxes();
             ClearStarBoxes();
         }
@@ -98,8 +102,47 @@ namespace ReviewApp_Porgramming_Assessment
 
             userStarReview = 1;
         }
+
+        private void btnViewReview_Click(object sender, EventArgs e)
+        {
+            txbUsername.Text = currentReview.ViewUsername();
+            txbCompanyName.Text = currentReview.ViewCompanyName();
+            txbWrittenReview.Text = currentReview.ViewWrittenReview();
+            switch (currentReview.ViewStarRating()) 
+            {
+                case 1:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    break;
+                case 2:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    break;
+                case 3:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    pcbStarThree.Image = Resources.yellowStar;
+                    break;
+                case 4:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    pcbStarThree.Image = Resources.yellowStar;
+                    pcbStarFour.Image = Resources.yellowStar;
+                    break;
+                case 5:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    pcbStarThree.Image = Resources.yellowStar;
+                    pcbStarFour.Image = Resources.yellowStar;
+                    pcbStarFive.Image = Resources.yellowStar;
+                    break;
+                default:
+
+                    break;
+            }
+
+        }
     }
 }
 
 
-//make a repsonsive star thing https://www.youtube.com/watch?v=V0gccjef5_E&ab_channel=AaricAaiden
+//Source for the changing stars - https://www.youtube.com/watch?v=V0gccjef5_E&ab_channel=AaricAaiden

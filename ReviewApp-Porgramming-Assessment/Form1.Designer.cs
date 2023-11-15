@@ -41,6 +41,7 @@
             this.pcbStarThree = new System.Windows.Forms.PictureBox();
             this.pcbStarTwo = new System.Windows.Forms.PictureBox();
             this.pcbStarOne = new System.Windows.Forms.PictureBox();
+            this.btnViewReview = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarFive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarFour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarThree)).BeginInit();
@@ -171,11 +172,22 @@
             this.pcbStarOne.TabStop = false;
             this.pcbStarOne.Click += new System.EventHandler(this.pcbStarOne_Click);
             // 
+            // btnViewReview
+            // 
+            this.btnViewReview.Location = new System.Drawing.Point(9, 486);
+            this.btnViewReview.Name = "btnViewReview";
+            this.btnViewReview.Size = new System.Drawing.Size(336, 67);
+            this.btnViewReview.TabIndex = 18;
+            this.btnViewReview.Text = "View review";
+            this.btnViewReview.UseVisualStyleBackColor = true;
+            this.btnViewReview.Click += new System.EventHandler(this.btnViewReview_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 498);
+            this.ClientSize = new System.Drawing.Size(357, 573);
+            this.Controls.Add(this.btnViewReview);
             this.Controls.Add(this.pcbStarOne);
             this.Controls.Add(this.pcbStarTwo);
             this.Controls.Add(this.pcbStarThree);
@@ -216,5 +228,6 @@
         private PictureBox pcbStarThree;
         private PictureBox pcbStarTwo;
         private PictureBox pcbStarOne;
+        private Button btnViewReview;
     }
 }
