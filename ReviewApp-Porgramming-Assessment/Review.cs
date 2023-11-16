@@ -25,6 +25,11 @@
         writtenReview = newWrittenReview;
     }
 
+    public void SetUsername(User currentUser)
+    {
+        usernameOfReviewer.
+    }
+
     public string ViewUsername()
     {
         return usernameOfReviewer;

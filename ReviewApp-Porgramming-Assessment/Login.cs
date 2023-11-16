@@ -12,9 +12,28 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class Login : Form
     {
+        User currentUser;
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            User newUser = new User();
+
+            newUser.GetUsername(txbUsername.Text);
+            newUser.GetPassword(txbPassword.Text);
+
+            currentUser = newUser;
+
+            ClearAllTextBoxes();
+        }
+
+        private void ClearAllTextBoxes()
+        {
+            txbUsername.Clear();
+            txbPassword.Clear();
         }
     }
 }
