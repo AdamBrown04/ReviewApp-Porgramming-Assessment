@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ReviewApp_Porgramming_Assessment
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
         User currentUser;
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }

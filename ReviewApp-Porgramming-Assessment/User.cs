@@ -12,4 +12,9 @@
     {
         password = newPassword.Trim();
     }
+
+    public string ViewUsername()
+    {
+        return username;
+    }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ReviewApp_Porgramming_Assessment
 {
-    partial class MakeReview
+    partial class ReviewForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbUsername = new System.Windows.Forms.TextBox();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.lblCompanyName = new System.Windows.Forms.Label();
             this.txbCompanyName = new System.Windows.Forms.TextBox();
             this.lblStarReview = new System.Windows.Forms.Label();
@@ -49,26 +47,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarOne)).BeginInit();
             this.SuspendLayout();
             // 
-            // txbUsername
-            // 
-            this.txbUsername.Location = new System.Drawing.Point(129, 21);
-            this.txbUsername.Name = "txbUsername";
-            this.txbUsername.Size = new System.Drawing.Size(216, 27);
-            this.txbUsername.TabIndex = 0;
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(9, 21);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(73, 20);
-            this.lblUsername.TabIndex = 1;
-            this.lblUsername.Text = "username";
-            // 
             // lblCompanyName
             // 
             this.lblCompanyName.AutoSize = true;
-            this.lblCompanyName.Location = new System.Drawing.Point(9, 82);
+            this.lblCompanyName.Location = new System.Drawing.Point(9, 12);
             this.lblCompanyName.Name = "lblCompanyName";
             this.lblCompanyName.Size = new System.Drawing.Size(111, 20);
             this.lblCompanyName.TabIndex = 2;
@@ -76,7 +58,7 @@
             // 
             // txbCompanyName
             // 
-            this.txbCompanyName.Location = new System.Drawing.Point(129, 82);
+            this.txbCompanyName.Location = new System.Drawing.Point(129, 12);
             this.txbCompanyName.Name = "txbCompanyName";
             this.txbCompanyName.Size = new System.Drawing.Size(216, 27);
             this.txbCompanyName.TabIndex = 3;
@@ -84,7 +66,7 @@
             // lblStarReview
             // 
             this.lblStarReview.AutoSize = true;
-            this.lblStarReview.Location = new System.Drawing.Point(9, 146);
+            this.lblStarReview.Location = new System.Drawing.Point(9, 76);
             this.lblStarReview.Name = "lblStarReview";
             this.lblStarReview.Size = new System.Drawing.Size(80, 20);
             this.lblStarReview.TabIndex = 4;
@@ -93,7 +75,7 @@
             // lblWrittenReview
             // 
             this.lblWrittenReview.AutoSize = true;
-            this.lblWrittenReview.Location = new System.Drawing.Point(9, 230);
+            this.lblWrittenReview.Location = new System.Drawing.Point(9, 160);
             this.lblWrittenReview.Name = "lblWrittenReview";
             this.lblWrittenReview.Size = new System.Drawing.Size(102, 20);
             this.lblWrittenReview.TabIndex = 6;
@@ -101,7 +83,7 @@
             // 
             // txbWrittenReview
             // 
-            this.txbWrittenReview.Location = new System.Drawing.Point(129, 223);
+            this.txbWrittenReview.Location = new System.Drawing.Point(129, 153);
             this.txbWrittenReview.Multiline = true;
             this.txbWrittenReview.Name = "txbWrittenReview";
             this.txbWrittenReview.Size = new System.Drawing.Size(216, 162);
@@ -109,7 +91,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(9, 413);
+            this.btnSubmit.Location = new System.Drawing.Point(9, 343);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(336, 67);
             this.btnSubmit.TabIndex = 8;
@@ -120,7 +102,7 @@
             // pcbStarFive
             // 
             this.pcbStarFive.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
-            this.pcbStarFive.Location = new System.Drawing.Point(305, 146);
+            this.pcbStarFive.Location = new System.Drawing.Point(305, 76);
             this.pcbStarFive.Name = "pcbStarFive";
             this.pcbStarFive.Size = new System.Drawing.Size(40, 41);
             this.pcbStarFive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -131,7 +113,7 @@
             // pcbStarFour
             // 
             this.pcbStarFour.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
-            this.pcbStarFour.Location = new System.Drawing.Point(259, 146);
+            this.pcbStarFour.Location = new System.Drawing.Point(259, 76);
             this.pcbStarFour.Name = "pcbStarFour";
             this.pcbStarFour.Size = new System.Drawing.Size(40, 41);
             this.pcbStarFour.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +124,7 @@
             // pcbStarThree
             // 
             this.pcbStarThree.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
-            this.pcbStarThree.Location = new System.Drawing.Point(213, 146);
+            this.pcbStarThree.Location = new System.Drawing.Point(213, 76);
             this.pcbStarThree.Name = "pcbStarThree";
             this.pcbStarThree.Size = new System.Drawing.Size(40, 41);
             this.pcbStarThree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +135,7 @@
             // pcbStarTwo
             // 
             this.pcbStarTwo.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
-            this.pcbStarTwo.Location = new System.Drawing.Point(167, 146);
+            this.pcbStarTwo.Location = new System.Drawing.Point(167, 76);
             this.pcbStarTwo.Name = "pcbStarTwo";
             this.pcbStarTwo.Size = new System.Drawing.Size(40, 41);
             this.pcbStarTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,7 +146,7 @@
             // pcbStarOne
             // 
             this.pcbStarOne.Image = global::ReviewApp_Porgramming_Assessment.Properties.Resources.whiteStar;
-            this.pcbStarOne.Location = new System.Drawing.Point(121, 146);
+            this.pcbStarOne.Location = new System.Drawing.Point(121, 76);
             this.pcbStarOne.Name = "pcbStarOne";
             this.pcbStarOne.Size = new System.Drawing.Size(40, 41);
             this.pcbStarOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,7 +156,7 @@
             // 
             // btnViewReview
             // 
-            this.btnViewReview.Location = new System.Drawing.Point(9, 486);
+            this.btnViewReview.Location = new System.Drawing.Point(9, 416);
             this.btnViewReview.Name = "btnViewReview";
             this.btnViewReview.Size = new System.Drawing.Size(336, 67);
             this.btnViewReview.TabIndex = 18;
@@ -182,11 +164,11 @@
             this.btnViewReview.UseVisualStyleBackColor = true;
             this.btnViewReview.Click += new System.EventHandler(this.btnViewReview_Click);
             // 
-            // Form1
+            // MakeReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 573);
+            this.ClientSize = new System.Drawing.Size(357, 498);
             this.Controls.Add(this.btnViewReview);
             this.Controls.Add(this.pcbStarOne);
             this.Controls.Add(this.pcbStarTwo);
@@ -199,10 +181,7 @@
             this.Controls.Add(this.lblStarReview);
             this.Controls.Add(this.txbCompanyName);
             this.Controls.Add(this.lblCompanyName);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.txbUsername);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MakeReview";
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarFive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarFour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarThree)).EndInit();
@@ -214,9 +193,6 @@
         }
 
         #endregion
-
-        private TextBox txbUsername;
-        private Label lblUsername;
         private Label lblCompanyName;
         private TextBox txbCompanyName;
         private Label lblStarReview;

@@ -27,7 +27,7 @@
 
     public void SetUsername(User currentUser)
     {
-        usernameOfReviewer.
+        usernameOfReviewer = currentUser.ViewUsername();
     }
 
     public string ViewUsername()
