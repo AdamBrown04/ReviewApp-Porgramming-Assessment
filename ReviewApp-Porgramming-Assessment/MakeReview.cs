@@ -2,20 +2,21 @@ using ReviewApp_Porgramming_Assessment.Properties;
 
 namespace ReviewApp_Porgramming_Assessment
 {
-    public partial class Form1 : Form
+    public partial class MakeReview : Form
     {
         Review currentReview;
         Review viewReview = new Review();
         int userStarReview = 0;
 
-        public Form1()
+        public MakeReview()
         {
             InitializeComponent();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if(userStarReview > 0)
+            string writtenReview = txbWrittenReview.Text; 
+            if(userStarReview > 0 && writtenReview.Length < 257)
             {
                 Review newReview = new Review();
 
@@ -29,9 +30,16 @@ namespace ReviewApp_Porgramming_Assessment
                 ClearTextBoxes();
                 ClearStarBoxes();
             }
-            else
+            else if (userStarReview == 0)
             {
                 MessageBox.Show("Please enter a star rating");
+            }
+            else if (writtenReview.Length > 256)
+            {
+                ClearTextBoxes();
+                txbWrittenReview.Text = "Maximum review length is 256 characters";
+                Task.Delay(1500).Wait();
+                txbWrittenReview.Clear();
             }
             
         }

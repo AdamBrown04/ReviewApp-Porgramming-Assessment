@@ -1,6 +1,6 @@
 ﻿namespace ReviewApp_Porgramming_Assessment
 {
-    partial class Form1
+    partial class MakeReview
     {
         /// <summary>
         ///  Required designer variable.
