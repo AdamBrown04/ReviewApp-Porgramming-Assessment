@@ -20,7 +20,7 @@ namespace ReviewApp_Porgramming_Assessment
             {
                 Review newReview = new Review();
 
-                newReview.GetUsername(txbUsername.Text);
+                newReview.GetUsername();
                 newReview.GetComapnyName(txbCompanyName.Text);
                 newReview.GetStarRating(userStarReview);
                 newReview.GetWrittenReview(txbWrittenReview.Text);

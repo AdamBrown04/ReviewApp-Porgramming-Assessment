@@ -12,7 +12,7 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class Login : Form
     {
-        User currentUser;
+       static User currentUser;
         public Login()
         {
             InitializeComponent();
