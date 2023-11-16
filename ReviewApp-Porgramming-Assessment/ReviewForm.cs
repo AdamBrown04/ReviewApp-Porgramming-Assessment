@@ -122,7 +122,7 @@ namespace ReviewApp_Porgramming_Assessment
         {
             txbCompanyName.Text = currentReview.ViewCompanyName();
             txbWrittenReview.Text = currentReview.ViewWrittenReview();
-            switch (currentReview.ViewStarRating()) 
+            switch (currentReview.ViewStarRating())  
             {
                 case 1:
                     pcbStarOne.Image = Resources.yellowStar;

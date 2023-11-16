@@ -17,7 +17,6 @@ namespace ReviewApp_Porgramming_Assessment
         {
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User newUser = new User();
@@ -28,6 +27,7 @@ namespace ReviewApp_Porgramming_Assessment
             currentUser = newUser;
 
             ClearAllTextBoxes();
+           
         }
 
         private void ClearAllTextBoxes()
