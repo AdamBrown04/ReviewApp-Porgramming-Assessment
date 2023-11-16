@@ -17,6 +17,8 @@ namespace ReviewApp_Porgramming_Assessment
         {
             InitializeComponent();
         }
+
+        ReviewForm newForm = new ReviewForm();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User newUser = new User();
@@ -27,6 +29,14 @@ namespace ReviewApp_Porgramming_Assessment
             currentUser = newUser;
 
             ClearAllTextBoxes();
+
+            newForm.Show();
+            this.Hide();
+            //if(login details are correct)
+            //swap to ReviewForm.cs
+            //close LoginForm
+            //else
+            //warning about incorrect login details
            
         }
 
@@ -37,3 +47,5 @@ namespace ReviewApp_Porgramming_Assessment
         }
     }
 }
+
+//source for swapping between forms https://www.homeandlearn.co.uk/csharp/csharp_s13p1.html#:~:text=To%20display%20the%20second%20form,to%20create%20the%20object%20yourself.
