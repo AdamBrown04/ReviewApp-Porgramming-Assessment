@@ -2,16 +2,18 @@ using ReviewApp_Porgramming_Assessment.Properties;
 
 namespace ReviewApp_Porgramming_Assessment
 {
-    public partial class ReviewForm : Form
+    public partial class ReviewForm : Form //form2
     {
+        User currentUser;
         Review currentReview;
         Review viewReview = new Review();
         int userStarReview = 0;
         int textLength;
-
-        public ReviewForm()
+       
+        public ReviewForm(User user)
         {
             InitializeComponent();
+            currentUser = user;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -21,7 +23,7 @@ namespace ReviewApp_Porgramming_Assessment
             {
                 Review newReview = new Review();
 
-               // newReview.GetUsername();
+                newReview.GetUsername(currentUser.ViewUsername());
                 newReview.GetComapnyName(txbCompanyName.Text);
                 newReview.GetStarRating(userStarReview);
                 newReview.GetWrittenReview(txbWrittenReview.Text);
@@ -123,6 +125,7 @@ namespace ReviewApp_Porgramming_Assessment
         {
             txbCompanyName.Text = currentReview.ViewCompanyName();
             txbWrittenReview.Text = currentReview.ViewWrittenReview();
+            lblUsernameText.Text = currentReview.ViewUsername();
             switch (currentReview.ViewStarRating())  
             {
                 case 1:

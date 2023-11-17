@@ -25,11 +25,6 @@
         writtenReview = newWrittenReview;
     }
 
-    public void SetUsername(User currentUser)
-    {
-        usernameOfReviewer = currentUser.ViewUsername();
-    }
-
     public string ViewUsername()
     {
         return usernameOfReviewer;

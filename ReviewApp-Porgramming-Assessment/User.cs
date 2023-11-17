@@ -1,20 +1,23 @@
-﻿class User
+﻿namespace ReviewApp_Porgramming_Assessment
 {
-    private string username;
-    private string password;
-
-    public void GetUsername(string newUsername)
+    public class User
     {
-        username = newUsername.Trim();
-    }
+        private string username;
+        private string password;
 
-    public void GetPassword(string newPassword)
-    {
-        password = newPassword.Trim();
-    }
+        public void GetUsername(string newUsername)
+        {
+            username = newUsername.Trim();
+        }
 
-    public string ViewUsername()
-    {
-        return username;
+        public void GetPassword(string newPassword)
+        {
+            password = newPassword.Trim();
+        }
+
+        public string ViewUsername()
+        {
+            return username;
+        }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ReviewApp_Porgramming_Assessment
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : Form //form1
     {
         User currentUser;
         public LoginForm()
@@ -18,7 +18,6 @@ namespace ReviewApp_Porgramming_Assessment
             InitializeComponent();
         }
 
-        ReviewForm newReview = new ReviewForm();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User newUser = new User();
@@ -30,6 +29,7 @@ namespace ReviewApp_Porgramming_Assessment
 
             ClearAllTextBoxes();
 
+            ReviewForm newReview = new ReviewForm(currentUser);
             newReview.Show();
             this.Hide();
             //if(login details are correct)

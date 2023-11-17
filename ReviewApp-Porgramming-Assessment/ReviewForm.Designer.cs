@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 521);
+            this.ClientSize = new System.Drawing.Size(361, 519);
             this.Controls.Add(this.lblCharacterCount);
             this.Controls.Add(this.btnViewReview);
             this.Controls.Add(this.pcbStarOne);
