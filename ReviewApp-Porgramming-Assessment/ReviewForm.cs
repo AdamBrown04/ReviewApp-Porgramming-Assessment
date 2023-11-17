@@ -7,6 +7,7 @@ namespace ReviewApp_Porgramming_Assessment
         Review currentReview;
         Review viewReview = new Review();
         int userStarReview = 0;
+        int textLength;
 
         public ReviewForm()
         {
@@ -151,6 +152,12 @@ namespace ReviewApp_Porgramming_Assessment
                     break;
             }
 
+        }
+
+        private void txbWrittenReview_TextChanged(object sender, EventArgs e)
+        {
+            textLength = txbWrittenReview.Text.Length;
+            lblCharacterCount.Text = $"{textLength}/256";
         }
     }
 }

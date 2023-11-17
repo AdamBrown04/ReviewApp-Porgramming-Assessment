@@ -18,7 +18,7 @@ namespace ReviewApp_Porgramming_Assessment
             InitializeComponent();
         }
 
-        ReviewForm newForm = new ReviewForm();
+        ReviewForm newReview = new ReviewForm();
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User newUser = new User();
@@ -30,7 +30,7 @@ namespace ReviewApp_Porgramming_Assessment
 
             ClearAllTextBoxes();
 
-            newForm.Show();
+            newReview.Show();
             this.Hide();
             //if(login details are correct)
             //swap to ReviewForm.cs
