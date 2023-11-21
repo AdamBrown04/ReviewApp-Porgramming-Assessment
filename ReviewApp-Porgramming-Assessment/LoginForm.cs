@@ -32,7 +32,11 @@ namespace ReviewApp_Porgramming_Assessment
                 string unsplitUserDetails = File.ReadAllText(path);
 
                 List<string> allLogins = new List<string>();
+
                 bool isUsernameCorrect = false;
+                bool isPasswordCorrect = false;
+                int userID = -1;
+
                 string[] splitTheString = unsplitUserDetails.Split(';', StringSplitOptions.RemoveEmptyEntries);
                 
                 foreach(string loginDetail in splitTheString)
@@ -42,8 +46,9 @@ namespace ReviewApp_Porgramming_Assessment
 
                 for(int x = 0; x < allLogins.Count; x += 2)
                 {
-                    if(newUser.ViewPassword() == allLogins[x])
+                    if(newUser.ViewUsername() == allLogins[x])
                     {
+                        userID = x;
                         isUsernameCorrect = true;
                         break;
                     }
@@ -51,7 +56,10 @@ namespace ReviewApp_Porgramming_Assessment
 
                 if (isUsernameCorrect)
                 {
-                    //check password is correct
+                    if(newUser.ViewPassword() == allLogins[userID+1] && userID != -1)
+                    {
+                         isPasswordCorrect = true;
+                    }
                 }
                 else
                 {
