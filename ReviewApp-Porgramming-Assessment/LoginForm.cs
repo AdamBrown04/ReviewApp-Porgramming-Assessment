@@ -19,6 +19,7 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //TEST THIS
             string path = "users.txt";
 
             User newUser = new User();
@@ -63,6 +64,8 @@ namespace ReviewApp_Porgramming_Assessment
                 this.Hide();
             }
             
+            //TEST ABOVE
+
             //if(login details are correct)
             //swap to ReviewForm.cs
             //close LoginForm
