@@ -19,5 +19,10 @@
         {
             return username;
         }
+
+        public string ViewPassword()
+        {
+            return password;
+        }
     }
 }

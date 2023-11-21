@@ -194,6 +194,7 @@
             this.Controls.Add(this.txbCompanyName);
             this.Controls.Add(this.lblCompanyName);
             this.Name = "ReviewForm";
+            this.Text = "Make a review";
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarFive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarFour)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbStarThree)).EndInit();

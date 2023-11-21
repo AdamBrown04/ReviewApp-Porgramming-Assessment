@@ -12,7 +12,6 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class LoginForm : Form //form1
     {
-        User currentUser;
         public LoginForm()
         {
             InitializeComponent();
@@ -20,18 +19,50 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string path = "users.txt";
+
             User newUser = new User();
 
-            newUser.GetUsername(txbUsername.Text);
-            newUser.GetPassword(txbPassword.Text);
+            if (File.Exists(path))
+            {
+                newUser.GetUsername(txbUsername.Text);
+                newUser.GetPassword(txbPassword.Text);
 
-            currentUser = newUser;
+                string unsplitUserDetails = File.ReadAllText(path);
 
-            ClearAllTextBoxes();
+                List<string> allLogins = new List<string>();
+                bool isUsernameCorrect = false;
+                string[] splitTheString = unsplitUserDetails.Split(';', StringSplitOptions.RemoveEmptyEntries);
+                
+                foreach(string loginDetail in splitTheString)
+                {
+                    allLogins.Add(loginDetail);
+                }
 
-            ReviewForm newReview = new ReviewForm(currentUser);
-            newReview.Show();
-            this.Hide();
+                for(int x = 0; x < allLogins.Count; x += 2)
+                {
+                    if(newUser.ViewPassword() == allLogins[x])
+                    {
+                        isUsernameCorrect = true;
+                        break;
+                    }
+                }
+
+                if (isUsernameCorrect)
+                {
+                    //check password is correct
+                }
+                else
+                {
+                    //error message saying username is incorrect
+                }
+                ClearAllTextBoxes();
+
+                ReviewForm newReview = new ReviewForm(newUser);
+                newReview.Show();
+                this.Hide();
+            }
+            
             //if(login details are correct)
             //swap to ReviewForm.cs
             //close LoginForm

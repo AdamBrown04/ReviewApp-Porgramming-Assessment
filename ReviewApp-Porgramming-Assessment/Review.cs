@@ -1,47 +1,53 @@
-﻿class Review 
+﻿namespace ReviewApp_Porgramming_Assessment
 {
-    private string usernameOfReviewer;
-    private string companyName;
-    private int starRating;
-    private string writtenReview;
-
-    public void GetUsername(string username)
+    class Review
     {
-        usernameOfReviewer = username;
-    }
+        private string usernameOfReviewer;
+        private string companyName;
+        private int starRating;
+        private string writtenReview;
 
-    public void GetComapnyName(string nameOfCompany)
-    {
-        companyName = nameOfCompany;
-    }
+        public void GetUsername(string username)
+        {
+            usernameOfReviewer = username;
+        }
 
-    public void GetStarRating (int ratingFromUser)
-    {
-        starRating = ratingFromUser;
-    }
+        public void GetComapnyName(string nameOfCompany)
+        {
+            companyName = nameOfCompany;
+        }
 
-    public void GetWrittenReview(string newWrittenReview)
-    {
-        writtenReview = newWrittenReview;
-    }
+        public void GetStarRating(int ratingFromUser)
+        {
+            starRating = ratingFromUser;
+        }
 
-    public string ViewUsername()
-    {
-        return usernameOfReviewer;
-    }
+        public void GetWrittenReview(string newWrittenReview)
+        {
+            writtenReview = newWrittenReview;
+        }
 
-    public string ViewCompanyName()
-    {
-        return companyName;
-    }
+        public string ViewUsername()
+        {
+            return usernameOfReviewer;
+        }
 
-    public int ViewStarRating()
-    {
-        return starRating;
-    }
+        public string ViewCompanyName()
+        {
+            return companyName;
+        }
 
-    public string ViewWrittenReview()
-    {
-        return writtenReview;
+        public int ViewStarRating()
+        {
+            return starRating;
+        }
+
+        public string ViewWrittenReview()
+        {
+            return writtenReview;
+        }
     }
 }
+
+
+
