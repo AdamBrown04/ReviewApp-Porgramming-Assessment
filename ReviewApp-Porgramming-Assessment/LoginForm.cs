@@ -19,7 +19,7 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //TEST THIS
+            //Need to use the bool values to check if the user is allowed to access the program or not
             string path = "users.txt";
 
             User newUser = new User();
@@ -71,15 +71,6 @@ namespace ReviewApp_Porgramming_Assessment
                 newReview.Show();
                 this.Hide();
             }
-            
-            //TEST ABOVE
-
-            //if(login details are correct)
-            //swap to ReviewForm.cs
-            //close LoginForm
-            //else
-            //warning about incorrect login details
-           
         }
 
         private void ClearAllTextBoxes()
