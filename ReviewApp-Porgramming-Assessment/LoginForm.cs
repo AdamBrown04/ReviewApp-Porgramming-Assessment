@@ -34,7 +34,6 @@ namespace ReviewApp_Porgramming_Assessment
                 List<string> allLogins = new List<string>();
 
                 bool isUsernameCorrect = false;
-                bool isPasswordCorrect = false;
                 int userID = -1;
 
                 string[] splitTheString = unsplitUserDetails.Split(';', StringSplitOptions.RemoveEmptyEntries);
@@ -54,22 +53,19 @@ namespace ReviewApp_Porgramming_Assessment
                     }
                 }
 
-                if (isUsernameCorrect)
+                if (isUsernameCorrect && newUser.ViewPassword() == allLogins[userID + 1] && userID != -1)
                 {
-                    if(newUser.ViewPassword() == allLogins[userID+1] && userID != -1)
-                    {
-                         isPasswordCorrect = true;
-                    }
+                    ReviewForm newReview = new ReviewForm(newUser);
+                    newReview.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    //error message saying username is incorrect
-                }
-                ClearAllTextBoxes();
-
-                ReviewForm newReview = new ReviewForm(newUser);
-                newReview.Show();
-                this.Hide();
+                    ClearAllTextBoxes();
+                    txbUsername.Text = "INVALID LOGIN";
+                    Task.Delay(1500).Wait();
+                    ClearAllTextBoxes();
+                }    
             }
         }
 
