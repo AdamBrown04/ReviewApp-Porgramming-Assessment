@@ -19,7 +19,6 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Need to use the bool values to check if the user is allowed to access the program or not
             string path = "users.txt";
 
             User newUser = new User();
@@ -37,15 +36,15 @@ namespace ReviewApp_Porgramming_Assessment
                 int userID = -1;
 
                 string[] splitTheString = unsplitUserDetails.Split(';', StringSplitOptions.RemoveEmptyEntries);
-                
-                foreach(string loginDetail in splitTheString)
+
+                foreach (string loginDetail in splitTheString)
                 {
                     allLogins.Add(loginDetail);
                 }
 
-                for(int x = 0; x < allLogins.Count; x += 2)
+                for (int x = 0; x < allLogins.Count; x += 2)
                 {
-                    if(newUser.ViewUsername() == allLogins[x])
+                    if (newUser.ViewUsername() == allLogins[x])
                     {
                         userID = x;
                         isUsernameCorrect = true;
@@ -63,9 +62,9 @@ namespace ReviewApp_Porgramming_Assessment
                 {
                     ClearAllTextBoxes();
                     txbUsername.Text = "INVALID LOGIN";
-                    Task.Delay(1500).Wait();
+                    Task.Delay(1000).Wait();
                     ClearAllTextBoxes();
-                }    
+                }
             }
         }
 

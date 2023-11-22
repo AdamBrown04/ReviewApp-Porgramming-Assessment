@@ -9,7 +9,7 @@ namespace ReviewApp_Porgramming_Assessment
         Review viewReview = new Review();
         int userStarReview = 0;
         int textLength;
-       
+
         public ReviewForm(User user)
         {
             InitializeComponent();
@@ -18,8 +18,8 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            string writtenReview = txbWrittenReview.Text; 
-            if(userStarReview > 0 && writtenReview.Length < 257)
+            string writtenReview = txbWrittenReview.Text;
+            if (userStarReview > 0 && writtenReview.Length < 257)
             {
                 Review newReview = new Review();
 
@@ -27,7 +27,7 @@ namespace ReviewApp_Porgramming_Assessment
                 newReview.GetComapnyName(txbCompanyName.Text);
                 newReview.GetStarRating(userStarReview);
                 newReview.GetWrittenReview(txbWrittenReview.Text);
-                
+
                 currentReview = newReview;
 
                 ClearTextBoxes();
@@ -44,7 +44,7 @@ namespace ReviewApp_Porgramming_Assessment
                 Task.Delay(1500).Wait();
                 txbWrittenReview.Clear();
             }
-            
+
         }
 
         private void ClearTextBoxes()
@@ -125,7 +125,7 @@ namespace ReviewApp_Porgramming_Assessment
         {
             txbCompanyName.Text = currentReview.ViewCompanyName();
             txbWrittenReview.Text = currentReview.ViewWrittenReview();
-            switch (currentReview.ViewStarRating())  
+            switch (currentReview.ViewStarRating())
             {
                 case 1:
                     pcbStarOne.Image = Resources.yellowStar;
