@@ -76,14 +76,26 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
-            if(txbUsername.Text != null && txbPassword.Text != null)
-            {
-                string username = txbUsername.Text;
-                string password = txbPassword.Text;
+            string username = txbUsername.Text.Trim();
+            string password = txbPassword.Text.Trim();
 
+
+            if (username != "" && password != "")
+            {
                 string text = $"{username};{password};";
 
-                File.AppendAllText(path, text) ;
+                File.AppendAllText(path, text);
+
+                ClearAllTextBoxes();
+
+                MessageBox.Show("New user has been created");
+            }
+            else 
+            {
+                ClearAllTextBoxes();
+
+                MessageBox.Show("                       INVALID INPUT! " +
+                    "\n        Username and password are required");
             }
             
         }

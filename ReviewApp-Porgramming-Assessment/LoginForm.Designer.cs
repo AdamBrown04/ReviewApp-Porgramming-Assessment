@@ -38,14 +38,14 @@
             // 
             // txbUsername
             // 
-            txbUsername.Location = new Point(146, 36);
+            txbUsername.Location = new Point(134, 12);
             txbUsername.Name = "txbUsername";
             txbUsername.Size = new Size(203, 27);
             txbUsername.TabIndex = 0;
             // 
             // txbPassword
             // 
-            txbPassword.Location = new Point(146, 93);
+            txbPassword.Location = new Point(134, 69);
             txbPassword.Name = "txbPassword";
             txbPassword.Size = new Size(203, 27);
             txbPassword.TabIndex = 1;
@@ -53,7 +53,7 @@
             // lblUsername
             // 
             lblUsername.AutoSize = true;
-            lblUsername.Location = new Point(21, 36);
+            lblUsername.Location = new Point(9, 12);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(76, 20);
             lblUsername.TabIndex = 2;
@@ -62,7 +62,7 @@
             // lblPassword
             // 
             lblPassword.AutoSize = true;
-            lblPassword.Location = new Point(22, 96);
+            lblPassword.Location = new Point(10, 72);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(75, 20);
             lblPassword.TabIndex = 3;
@@ -70,7 +70,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(22, 155);
+            btnLogin.Location = new Point(10, 131);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(327, 60);
             btnLogin.TabIndex = 4;
@@ -80,7 +80,7 @@
             // 
             // btnCreateAccount
             // 
-            btnCreateAccount.Location = new Point(22, 239);
+            btnCreateAccount.Location = new Point(10, 215);
             btnCreateAccount.Name = "btnCreateAccount";
             btnCreateAccount.Size = new Size(327, 57);
             btnCreateAccount.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(364, 313);
+            ClientSize = new Size(347, 284);
             Controls.Add(btnCreateAccount);
             Controls.Add(btnLogin);
             Controls.Add(lblPassword);
