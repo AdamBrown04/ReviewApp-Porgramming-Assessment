@@ -9,6 +9,7 @@ namespace ReviewApp_Porgramming_Assessment
         Review viewReview = new Review();
         int userStarReview = 0;
         int textLength;
+        string path = "reviews.txt";
 
         public ReviewForm(User user)
         {
@@ -27,8 +28,11 @@ namespace ReviewApp_Porgramming_Assessment
                 newReview.GetComapnyName(txbCompanyName.Text);
                 newReview.GetStarRating(userStarReview);
                 newReview.GetWrittenReview(txbWrittenReview.Text);
-
                 currentReview = newReview;
+
+                string text = $"{newReview.ViewUsername()};{newReview.ViewCompanyName()};{newReview.ViewStarRating()};{newReview.ViewWrittenReview()};";
+
+                File.AppendAllText(path, text);
 
                 ClearTextBoxes();
                 ClearStarBoxes();
