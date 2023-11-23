@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class LoginForm : Form //form1
     {
+        string path = "users.txt";
         public LoginForm()
         {
             InitializeComponent();
@@ -19,8 +21,6 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string path = "users.txt";
-
             User newUser = new User();
 
             if (File.Exists(path))
@@ -72,6 +72,20 @@ namespace ReviewApp_Porgramming_Assessment
         {
             txbUsername.Clear();
             txbPassword.Clear();
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            if(txbUsername.Text != null && txbPassword.Text != null)
+            {
+                string username = txbUsername.Text;
+                string password = txbPassword.Text;
+
+                string text = $"{username};{password};";
+
+                File.AppendAllText(path, text) ;
+            }
+            
         }
     }
 }
