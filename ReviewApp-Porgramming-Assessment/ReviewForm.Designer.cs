@@ -41,6 +41,7 @@
             pcbStarOne = new PictureBox();
             btnViewReview = new Button();
             lblCharacterCount = new Label();
+            listBox1 = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarFour).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).BeginInit();
@@ -93,7 +94,7 @@
             // 
             // btnSubmit
             // 
-            btnSubmit.Location = new Point(9, 370);
+            btnSubmit.Location = new Point(9, 341);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(336, 67);
             btnSubmit.TabIndex = 8;
@@ -111,6 +112,7 @@
             pcbStarFive.TabIndex = 13;
             pcbStarFive.TabStop = false;
             pcbStarFive.Click += pcbStarFive_Click;
+            pcbStarFive.MouseHover += pcbStarFive_MouseHover;
             // 
             // pcbStarFour
             // 
@@ -122,6 +124,7 @@
             pcbStarFour.TabIndex = 14;
             pcbStarFour.TabStop = false;
             pcbStarFour.Click += pcbStarFour_Click;
+            pcbStarFour.MouseHover += pcbStarFour_MouseHover;
             // 
             // pcbStarThree
             // 
@@ -133,6 +136,7 @@
             pcbStarThree.TabIndex = 15;
             pcbStarThree.TabStop = false;
             pcbStarThree.Click += pcbStarThree_Click;
+            pcbStarThree.MouseHover += pcbStarThree_MouseHover;
             // 
             // pcbStarTwo
             // 
@@ -144,6 +148,7 @@
             pcbStarTwo.TabIndex = 16;
             pcbStarTwo.TabStop = false;
             pcbStarTwo.Click += pcbStarTwo_Click;
+            pcbStarTwo.MouseHover += pcbStarTwo_MouseHover;
             // 
             // pcbStarOne
             // 
@@ -155,10 +160,11 @@
             pcbStarOne.TabIndex = 17;
             pcbStarOne.TabStop = false;
             pcbStarOne.Click += pcbStarOne_Click;
+            pcbStarOne.MouseHover += pcbStarOne_MouseHover;
             // 
             // btnViewReview
             // 
-            btnViewReview.Location = new Point(9, 443);
+            btnViewReview.Location = new Point(9, 424);
             btnViewReview.Name = "btnViewReview";
             btnViewReview.Size = new Size(336, 67);
             btnViewReview.TabIndex = 18;
@@ -175,11 +181,22 @@
             lblCharacterCount.TabIndex = 19;
             lblCharacterCount.Text = "0/256";
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Location = new Point(371, 10);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(416, 484);
+            listBox1.TabIndex = 20;
+            // 
             // ReviewForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(357, 519);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(815, 506);
+            Controls.Add(listBox1);
             Controls.Add(lblCharacterCount);
             Controls.Add(btnViewReview);
             Controls.Add(pcbStarOne);
@@ -193,6 +210,7 @@
             Controls.Add(lblStarReview);
             Controls.Add(txbCompanyName);
             Controls.Add(lblCompanyName);
+            ForeColor = SystemColors.ControlText;
             Name = "ReviewForm";
             Text = "Make a review";
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).EndInit();
@@ -218,5 +236,6 @@
         private PictureBox pcbStarOne;
         private Button btnViewReview;
         private Label lblCharacterCount;
+        private ListBox listBox1;
     }
 }
