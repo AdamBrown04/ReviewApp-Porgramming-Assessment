@@ -14,6 +14,10 @@ namespace ReviewApp_Porgramming_Assessment
     public partial class LoginForm : Form //form1
     {
         string path = "users.txt";
+        List<string> allLogins = new List<string>();
+
+        bool isUsernameCorrect = false;
+        int userID = -1;
         public LoginForm()
         {
             InitializeComponent();
@@ -28,29 +32,7 @@ namespace ReviewApp_Porgramming_Assessment
                 newUser.GetUsername(txbUsername.Text);
                 newUser.GetPassword(txbPassword.Text);
 
-                string unsplitUserDetails = File.ReadAllText(path);
-
-                List<string> allLogins = new List<string>();
-
-                bool isUsernameCorrect = false;
-                int userID = -1;
-
-                string[] splitTheString = unsplitUserDetails.Split(';', StringSplitOptions.RemoveEmptyEntries);
-
-                foreach (string loginDetail in splitTheString)
-                {
-                    allLogins.Add(loginDetail);
-                }
-
-                for (int x = 0; x < allLogins.Count; x += 2)
-                {
-                    if (newUser.ViewUsername() == allLogins[x])
-                    {
-                        userID = x;
-                        isUsernameCorrect = true;
-                        break;
-                    }
-                }
+                FindUsername(newUser.ViewUsername());
 
                 if (isUsernameCorrect && newUser.ViewPassword() == allLogins[userID + 1] && userID != -1)
                 {
@@ -67,20 +49,15 @@ namespace ReviewApp_Porgramming_Assessment
                 }
             }
         }
-
-        private void ClearAllTextBoxes()
-        {
-            txbUsername.Clear();
-            txbPassword.Clear();
-        }
-
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
+            isUsernameCorrect = false;
             string username = txbUsername.Text.Trim();
             string password = txbPassword.Text.Trim();
 
+            FindUsername(username);
 
-            if (username != "" && password != "")
+            if (username != "" && password != "" && isUsernameCorrect == false)
             {
                 string text = $"{username};{password};";
 
@@ -97,7 +74,33 @@ namespace ReviewApp_Porgramming_Assessment
                 MessageBox.Show("                       INVALID INPUT! " +
                     "\n        Username and password are required");
             }
-            
+        }
+        private void ClearAllTextBoxes()
+        {
+            txbUsername.Clear();
+            txbPassword.Clear();
+        }
+
+        private void FindUsername(string inputUsername)
+        {
+            string unsplitUserDetails = File.ReadAllText(path);
+
+            string[] splitTheString = unsplitUserDetails.Split(';', StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string loginDetail in splitTheString)
+            {
+                allLogins.Add(loginDetail);
+            }
+
+            for (int x = 0; x < allLogins.Count; x += 2)
+            {
+                if (inputUsername == allLogins[x])
+                {
+                    userID = x;
+                    isUsernameCorrect = true;
+                    break;
+                }
+            }
         }
     }
 }
