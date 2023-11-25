@@ -112,6 +112,7 @@
             pcbStarFive.TabIndex = 13;
             pcbStarFive.TabStop = false;
             pcbStarFive.Click += pcbStarFive_Click;
+            pcbStarFive.MouseLeave += pcbStarFive_MouseLeave;
             pcbStarFive.MouseHover += pcbStarFive_MouseHover;
             // 
             // pcbStarFour
@@ -124,6 +125,7 @@
             pcbStarFour.TabIndex = 14;
             pcbStarFour.TabStop = false;
             pcbStarFour.Click += pcbStarFour_Click;
+            pcbStarFour.MouseLeave += pcbStarFour_MouseLeave;
             pcbStarFour.MouseHover += pcbStarFour_MouseHover;
             // 
             // pcbStarThree
@@ -136,6 +138,7 @@
             pcbStarThree.TabIndex = 15;
             pcbStarThree.TabStop = false;
             pcbStarThree.Click += pcbStarThree_Click;
+            pcbStarThree.MouseLeave += pcbStarThree_MouseLeave;
             pcbStarThree.MouseHover += pcbStarThree_MouseHover;
             // 
             // pcbStarTwo
@@ -148,6 +151,7 @@
             pcbStarTwo.TabIndex = 16;
             pcbStarTwo.TabStop = false;
             pcbStarTwo.Click += pcbStarTwo_Click;
+            pcbStarTwo.MouseLeave += pcbStarTwo_MouseLeave;
             pcbStarTwo.MouseHover += pcbStarTwo_MouseHover;
             // 
             // pcbStarOne
@@ -160,6 +164,7 @@
             pcbStarOne.TabIndex = 17;
             pcbStarOne.TabStop = false;
             pcbStarOne.Click += pcbStarOne_Click;
+            pcbStarOne.MouseLeave += pcbStarOne_MouseLeave;
             pcbStarOne.MouseHover += pcbStarOne_MouseHover;
             // 
             // btnViewReview

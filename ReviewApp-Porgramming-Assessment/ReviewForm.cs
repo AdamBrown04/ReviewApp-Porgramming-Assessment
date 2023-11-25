@@ -106,63 +106,34 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void pcbStarFive_Click(object sender, EventArgs e)
         {
-            pcbStarOne.Image = Resources.yellowStar;
-            pcbStarTwo.Image = Resources.yellowStar;
-            pcbStarThree.Image = Resources.yellowStar;
-            pcbStarFour.Image = Resources.yellowStar;
-            pcbStarFive.Image = Resources.yellowStar;
-
             userStarReview = 5;
+            ShowStarRating();
         }
 
         private void pcbStarFour_Click(object sender, EventArgs e)
         {
-            pcbStarOne.Image = Resources.yellowStar;
-            pcbStarTwo.Image = Resources.yellowStar;
-            pcbStarThree.Image = Resources.yellowStar;
-            pcbStarFour.Image = Resources.yellowStar;
-
-            pcbStarFive.Image = Resources.whiteStar;
-
             userStarReview = 4;
+            ShowStarRating();
         }
 
         private void pcbStarThree_Click(object sender, EventArgs e)
         {
-            pcbStarOne.Image = Resources.yellowStar;
-            pcbStarTwo.Image = Resources.yellowStar;
-            pcbStarThree.Image = Resources.yellowStar;
-
-            pcbStarFour.Image = Resources.whiteStar;
-            pcbStarFive.Image = Resources.whiteStar;
-
             userStarReview = 3;
+            ShowStarRating();
         }
 
         private void pcbStarTwo_Click(object sender, EventArgs e)
         {
-            pcbStarOne.Image = Resources.yellowStar;
-            pcbStarTwo.Image = Resources.yellowStar;
-
-            pcbStarThree.Image = Resources.whiteStar;
-            pcbStarFour.Image = Resources.whiteStar;
-            pcbStarFive.Image = Resources.whiteStar;
-
             userStarReview = 2;
+            ShowStarRating();
         }
 
         private void pcbStarOne_Click(object sender, EventArgs e)
         {
-            pcbStarOne.Image = Resources.yellowStar;
-
-            pcbStarTwo.Image = Resources.whiteStar;
-            pcbStarThree.Image = Resources.whiteStar;
-            pcbStarFour.Image = Resources.whiteStar;
-            pcbStarFive.Image = Resources.whiteStar;
-
             userStarReview = 1;
+            ShowStarRating();
         }
-/*
+
         private void pcbStarFive_MouseHover(object sender, EventArgs e)
         {
             pcbStarOne.Image = Resources.yellowStar;
@@ -210,7 +181,86 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarThree.Image = Resources.whiteStar;
             pcbStarFour.Image = Resources.whiteStar;
             pcbStarFive.Image = Resources.whiteStar;
-        }*/
+        }
+
+        private void pcbStarFive_MouseLeave(object sender, EventArgs e)
+        {
+            ShowStarRating();
+        }
+
+        private void pcbStarFour_MouseLeave(object sender, EventArgs e)
+        {
+            ShowStarRating();
+        }
+
+        private void pcbStarThree_MouseLeave(object sender, EventArgs e)
+        {
+            ShowStarRating();
+        }
+
+        private void pcbStarTwo_MouseLeave(object sender, EventArgs e)
+        {
+            ShowStarRating();
+        }
+
+        private void pcbStarOne_MouseLeave(object sender, EventArgs e)
+        {
+            ShowStarRating();
+        }
+        private void ShowStarRating()
+        {
+            switch (userStarReview)
+            {
+                case 1:
+                    pcbStarOne.Image = Resources.yellowStar;
+
+                    pcbStarTwo.Image = Resources.whiteStar;
+                    pcbStarThree.Image = Resources.whiteStar;
+                    pcbStarFour.Image = Resources.whiteStar;
+                    pcbStarFive.Image = Resources.whiteStar;
+                    break;
+                case 2:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+
+                    pcbStarThree.Image = Resources.whiteStar;
+                    pcbStarFour.Image = Resources.whiteStar;
+                    pcbStarFive.Image = Resources.whiteStar;
+                    break;
+                case 3:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    pcbStarThree.Image = Resources.yellowStar;
+
+                    pcbStarFour.Image = Resources.whiteStar;
+                    pcbStarFive.Image = Resources.whiteStar;
+                    break;
+                case 4:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    pcbStarThree.Image = Resources.yellowStar;
+                    pcbStarFour.Image = Resources.yellowStar;
+
+                    pcbStarFive.Image = Resources.whiteStar;
+                    break;
+                case 5:
+                    pcbStarOne.Image = Resources.yellowStar;
+                    pcbStarTwo.Image = Resources.yellowStar;
+                    pcbStarThree.Image = Resources.yellowStar;
+                    pcbStarFour.Image = Resources.yellowStar;
+                    pcbStarFive.Image = Resources.yellowStar;
+                    break;
+                default:
+                    pcbStarOne.Image = Resources.whiteStar;
+                    pcbStarTwo.Image = Resources.whiteStar;
+                    pcbStarThree.Image = Resources.whiteStar;
+                    pcbStarFour.Image = Resources.whiteStar;
+                    pcbStarFive.Image = Resources.whiteStar;
+                    break;
+            }
+
+        }
+
     }
 }
 
