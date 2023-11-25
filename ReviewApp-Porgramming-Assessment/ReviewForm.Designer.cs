@@ -41,7 +41,7 @@
             pcbStarOne = new PictureBox();
             btnViewReview = new Button();
             lblCharacterCount = new Label();
-            listBox1 = new ListBox();
+            LsbViewReview = new ListBox();
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarFour).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).BeginInit();
@@ -186,14 +186,14 @@
             lblCharacterCount.TabIndex = 19;
             lblCharacterCount.Text = "0/256";
             // 
-            // listBox1
+            // LsbViewReview
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(371, 10);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(416, 484);
-            listBox1.TabIndex = 20;
+            LsbViewReview.FormattingEnabled = true;
+            LsbViewReview.ItemHeight = 20;
+            LsbViewReview.Location = new Point(371, 10);
+            LsbViewReview.Name = "LsbViewReview";
+            LsbViewReview.Size = new Size(416, 484);
+            LsbViewReview.TabIndex = 20;
             // 
             // ReviewForm
             // 
@@ -201,7 +201,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(815, 506);
-            Controls.Add(listBox1);
+            Controls.Add(LsbViewReview);
             Controls.Add(lblCharacterCount);
             Controls.Add(btnViewReview);
             Controls.Add(pcbStarOne);
@@ -241,6 +241,6 @@
         private PictureBox pcbStarOne;
         private Button btnViewReview;
         private Label lblCharacterCount;
-        private ListBox listBox1;
+        private ListBox LsbViewReview;
     }
 }
