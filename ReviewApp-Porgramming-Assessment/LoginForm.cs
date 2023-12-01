@@ -106,3 +106,4 @@ namespace ReviewApp_Porgramming_Assessment
 }
 
 //source for swapping between forms https://www.homeandlearn.co.uk/csharp/csharp_s13p1.html#:~:text=To%20display%20the%20second%20form,to%20create%20the%20object%20yourself.
+//source for the split function https://eur02.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fdotnet%2Fapi%2Fsystem.string.split%3Fview%3Dnet-7.0&data=05%7C01%7CAdam.Brown9%40student.shu.ac.uk%7C3d23371240e648625d5c08dbe521193c%7C8968f6a1ac13472fb899f7316e439f43%7C0%7C0%7C638355702530830959%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=3Xal2M6SSKfrI0wPQP6lMeTGaKrxy2ifOXLGVWErq94%3D&reserved=0
