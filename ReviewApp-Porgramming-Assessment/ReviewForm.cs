@@ -35,6 +35,7 @@ namespace ReviewApp_Porgramming_Assessment
                 LsbViewReview.Items.Add(newReview);
                 File.AppendAllText(path, text);
 
+                userStarReview = 0;
                 ClearTextBoxes();
                 ClearStarBoxes();
             }
