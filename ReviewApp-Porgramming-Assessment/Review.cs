@@ -46,6 +46,11 @@
         {
             return writtenReview;
         }
+
+        public override string ToString()
+        {
+            return $"{companyName} reviewed by {usernameOfReviewer}";
+        }
     }
 }
 

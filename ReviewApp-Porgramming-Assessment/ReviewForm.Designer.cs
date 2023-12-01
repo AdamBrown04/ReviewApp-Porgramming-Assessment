@@ -190,9 +190,9 @@
             // 
             LsbViewReview.FormattingEnabled = true;
             LsbViewReview.ItemHeight = 20;
-            LsbViewReview.Location = new Point(371, 10);
+            LsbViewReview.Location = new Point(368, 7);
             LsbViewReview.Name = "LsbViewReview";
-            LsbViewReview.Size = new Size(416, 484);
+            LsbViewReview.Size = new Size(222, 484);
             LsbViewReview.TabIndex = 20;
             // 
             // ReviewForm
