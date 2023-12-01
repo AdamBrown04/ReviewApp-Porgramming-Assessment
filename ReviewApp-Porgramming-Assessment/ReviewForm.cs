@@ -16,7 +16,7 @@ namespace ReviewApp_Porgramming_Assessment
             InitializeComponent();
             currentUser = user;
         }
-        
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string writtenReview = txbWrittenReview.Text;
@@ -261,6 +261,18 @@ namespace ReviewApp_Porgramming_Assessment
             }
 
         }
+
+        private void LsbViewReview_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

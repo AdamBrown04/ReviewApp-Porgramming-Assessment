@@ -42,11 +42,28 @@
             btnViewReview = new Button();
             lblCharacterCount = new Label();
             LsbViewReview = new ListBox();
+            lblShowWrittenReview = new Label();
+            lblShowStars = new Label();
+            lblShowCompanyName = new Label();
+            lblShowUsername = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarFour).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarTwo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarOne).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // lblCompanyName
@@ -60,9 +77,9 @@
             // 
             // txbCompanyName
             // 
-            txbCompanyName.Location = new Point(129, 12);
+            txbCompanyName.Location = new Point(121, 12);
             txbCompanyName.Name = "txbCompanyName";
-            txbCompanyName.Size = new Size(216, 27);
+            txbCompanyName.Size = new Size(224, 27);
             txbCompanyName.TabIndex = 3;
             // 
             // lblStarReview
@@ -85,10 +102,10 @@
             // 
             // txbWrittenReview
             // 
-            txbWrittenReview.Location = new Point(129, 153);
+            txbWrittenReview.Location = new Point(121, 153);
             txbWrittenReview.Multiline = true;
             txbWrittenReview.Name = "txbWrittenReview";
-            txbWrittenReview.Size = new Size(216, 162);
+            txbWrittenReview.Size = new Size(224, 162);
             txbWrittenReview.TabIndex = 7;
             txbWrittenReview.TextChanged += txbWrittenReview_TextChanged;
             // 
@@ -194,13 +211,136 @@
             LsbViewReview.Name = "LsbViewReview";
             LsbViewReview.Size = new Size(222, 484);
             LsbViewReview.TabIndex = 20;
+            LsbViewReview.SelectedIndexChanged += LsbViewReview_SelectedIndexChanged;
+            // 
+            // lblShowWrittenReview
+            // 
+            lblShowWrittenReview.AutoSize = true;
+            lblShowWrittenReview.Location = new Point(616, 220);
+            lblShowWrittenReview.Name = "lblShowWrittenReview";
+            lblShowWrittenReview.Size = new Size(102, 20);
+            lblShowWrittenReview.TabIndex = 23;
+            lblShowWrittenReview.Text = "written review";
+            lblShowWrittenReview.Click += label1_Click;
+            // 
+            // lblShowStars
+            // 
+            lblShowStars.AutoSize = true;
+            lblShowStars.Location = new Point(616, 153);
+            lblShowStars.Name = "lblShowStars";
+            lblShowStars.Size = new Size(80, 20);
+            lblShowStars.TabIndex = 22;
+            lblShowStars.Text = "star review";
+            // 
+            // lblShowCompanyName
+            // 
+            lblShowCompanyName.AutoSize = true;
+            lblShowCompanyName.Location = new Point(616, 76);
+            lblShowCompanyName.Name = "lblShowCompanyName";
+            lblShowCompanyName.Size = new Size(111, 20);
+            lblShowCompanyName.TabIndex = 21;
+            lblShowCompanyName.Text = "company name";
+            // 
+            // lblShowUsername
+            // 
+            lblShowUsername.AutoSize = true;
+            lblShowUsername.Location = new Point(616, 26);
+            lblShowUsername.Name = "lblShowUsername";
+            lblShowUsername.Size = new Size(73, 20);
+            lblShowUsername.TabIndex = 24;
+            lblShowUsername.Text = "username";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.whiteStar;
+            pictureBox1.Location = new Point(725, 140);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(40, 41);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 31;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.whiteStar;
+            pictureBox2.Location = new Point(771, 140);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(40, 41);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 30;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.whiteStar;
+            pictureBox3.Location = new Point(817, 140);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(40, 41);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 29;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.whiteStar;
+            pictureBox4.Location = new Point(863, 140);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(40, 41);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 28;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.whiteStar;
+            pictureBox5.Location = new Point(909, 140);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(40, 41);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 27;
+            pictureBox5.TabStop = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(725, 217);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(224, 162);
+            textBox1.TabIndex = 26;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(725, 76);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(224, 27);
+            textBox2.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(725, 26);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(224, 27);
+            textBox3.TabIndex = 32;
             // 
             // ReviewForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(815, 506);
+            ClientSize = new Size(970, 506);
+            Controls.Add(textBox3);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox5);
+            Controls.Add(textBox1);
+            Controls.Add(textBox2);
+            Controls.Add(lblShowUsername);
+            Controls.Add(lblShowWrittenReview);
+            Controls.Add(lblShowStars);
+            Controls.Add(lblShowCompanyName);
             Controls.Add(LsbViewReview);
             Controls.Add(lblCharacterCount);
             Controls.Add(btnViewReview);
@@ -223,6 +363,11 @@
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarTwo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarOne).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -242,5 +387,17 @@
         private Button btnViewReview;
         private Label lblCharacterCount;
         private ListBox LsbViewReview;
+        private Label lblShowWrittenReview;
+        private Label lblShowStars;
+        private Label lblShowCompanyName;
+        private Label lblShowUsername;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private TextBox textBox3;
     }
 }
