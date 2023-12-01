@@ -279,11 +279,6 @@ namespace ReviewApp_Porgramming_Assessment
             currentIndex = -1;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ReviewForm_Load(object sender, EventArgs e)
         {
             if (File.Exists(path))
@@ -299,18 +294,23 @@ namespace ReviewApp_Porgramming_Assessment
                     splitReview.Add(item);
                 }
 
-                for(int x = 0; x<splitReview.Count; x += 4)
+                for (int x = 0; x < splitReview.Count; x += 4)
                 {
                     Review loadReview = new Review();
 
                     loadReview.GetUsername(splitReview[x]);
-                    loadReview.GetComapnyName(splitReview[x+1]);
+                    loadReview.GetComapnyName(splitReview[x + 1]);
                     loadReview.GetStarRating(Convert.ToInt32(splitReview[x + 2]));
                     loadReview.GetWrittenReview(splitReview[x + 3]);
 
                     LsbViewReview.Items.Add(loadReview);
                 }
             }
+        }
+
+        private void ReviewForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }
