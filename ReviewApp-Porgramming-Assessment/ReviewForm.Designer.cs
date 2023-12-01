@@ -51,9 +51,9 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txbShowWrittenReview = new TextBox();
+            txbShowCompanyName = new TextBox();
+            txbShowUsername = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarFour).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).BeginInit();
@@ -300,28 +300,28 @@
             pictureBox5.TabIndex = 27;
             pictureBox5.TabStop = false;
             // 
-            // textBox1
+            // txbShowWrittenReview
             // 
-            textBox1.Location = new Point(725, 217);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(224, 162);
-            textBox1.TabIndex = 26;
+            txbShowWrittenReview.Location = new Point(725, 217);
+            txbShowWrittenReview.Multiline = true;
+            txbShowWrittenReview.Name = "txbShowWrittenReview";
+            txbShowWrittenReview.Size = new Size(224, 162);
+            txbShowWrittenReview.TabIndex = 26;
             // 
-            // textBox2
+            // txbShowCompanyName
             // 
-            textBox2.Location = new Point(725, 76);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(224, 27);
-            textBox2.TabIndex = 25;
+            txbShowCompanyName.Location = new Point(725, 76);
+            txbShowCompanyName.Name = "txbShowCompanyName";
+            txbShowCompanyName.Size = new Size(224, 27);
+            txbShowCompanyName.TabIndex = 25;
             // 
-            // textBox3
+            // txbShowUsername
             // 
-            textBox3.Location = new Point(725, 26);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(224, 27);
-            textBox3.TabIndex = 32;
+            txbShowUsername.Location = new Point(725, 26);
+            txbShowUsername.Name = "txbShowUsername";
+            txbShowUsername.ReadOnly = true;
+            txbShowUsername.Size = new Size(224, 27);
+            txbShowUsername.TabIndex = 32;
             // 
             // ReviewForm
             // 
@@ -329,14 +329,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(970, 506);
-            Controls.Add(textBox3);
+            Controls.Add(txbShowUsername);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
-            Controls.Add(textBox1);
-            Controls.Add(textBox2);
+            Controls.Add(txbShowWrittenReview);
+            Controls.Add(txbShowCompanyName);
             Controls.Add(lblShowUsername);
             Controls.Add(lblShowWrittenReview);
             Controls.Add(lblShowStars);
@@ -396,8 +396,8 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txbShowWrittenReview;
+        private TextBox txbShowCompanyName;
+        private TextBox txbShowUsername;
     }
 }

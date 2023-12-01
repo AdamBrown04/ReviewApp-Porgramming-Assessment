@@ -264,7 +264,11 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void LsbViewReview_SelectedIndexChanged(object sender, EventArgs e)
         {
+            currentReview = LsbViewReview.SelectedItem as Review;
 
+            txbShowUsername.Text = currentReview.ViewUsername();
+            txbShowCompanyName.Text = currentReview.ViewCompanyName();
+            txbShowWrittenReview.Text = currentReview.ViewWrittenReview();
         }
 
 
