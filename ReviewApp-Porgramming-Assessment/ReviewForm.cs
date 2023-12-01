@@ -317,3 +317,4 @@ namespace ReviewApp_Porgramming_Assessment
 
 
 //Source for the changing stars - https://www.youtube.com/watch?v=V0gccjef5_E&ab_channel=AaricAaiden
+//source for closing the application when the form closes https://www.c-sharpcorner.com/UploadFile/c713c3/how-to-exit-in-C-Sharp/#:~:text=When%20we%20need%20to%20exit,on%20some%20button%20click%20event.&text=When%20we%20are%20running%20a,then%20we%20should%20use%20%22System.
