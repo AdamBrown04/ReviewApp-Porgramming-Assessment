@@ -5,8 +5,6 @@ namespace ReviewApp_Porgramming_Assessment
     public partial class ReviewForm : Form //form2
     {
         User currentUser;
-        Review currentReview;
-        Review viewReview = new Review();
         int userStarReview = 0;
         int textLength;
         string path = "reviews.txt";
@@ -28,7 +26,6 @@ namespace ReviewApp_Porgramming_Assessment
                 newReview.GetComapnyName(txbCompanyName.Text);
                 newReview.GetStarRating(userStarReview);
                 newReview.GetWrittenReview(txbWrittenReview.Text);
-                currentReview = newReview;
 
                 string text = $"{newReview.ViewUsername()};{newReview.ViewCompanyName()};{newReview.ViewStarRating()};{newReview.ViewWrittenReview()};";
 
@@ -265,11 +262,11 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void LsbViewReview_SelectedIndexChanged(object sender, EventArgs e)
         {
-            currentReview = LsbViewReview.SelectedItem as Review;
+            Review ViewReview = LsbViewReview.SelectedItem as Review;
 
-            txbShowUsername.Text = currentReview.ViewUsername();
-            txbShowCompanyName.Text = currentReview.ViewCompanyName();
-            txbShowWrittenReview.Text = currentReview.ViewWrittenReview();
+            txbShowUsername.Text = ViewReview.ViewUsername();
+            txbShowCompanyName.Text = ViewReview.ViewCompanyName();
+            txbShowWrittenReview.Text = ViewReview.ViewWrittenReview();
         }
 
 

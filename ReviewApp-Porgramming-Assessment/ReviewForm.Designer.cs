@@ -46,11 +46,11 @@
             lblShowStars = new Label();
             lblShowCompanyName = new Label();
             lblShowUsername = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
+            pcbShowStars1 = new PictureBox();
+            pcbShowStars2 = new PictureBox();
+            pcbShowStars3 = new PictureBox();
+            pcbShowStars4 = new PictureBox();
+            pcbShowStars5 = new PictureBox();
             txbShowWrittenReview = new TextBox();
             txbShowCompanyName = new TextBox();
             txbShowUsername = new TextBox();
@@ -59,11 +59,11 @@
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarTwo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarOne).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars5).BeginInit();
             SuspendLayout();
             // 
             // lblCompanyName
@@ -250,55 +250,55 @@
             lblShowUsername.TabIndex = 24;
             lblShowUsername.Text = "username";
             // 
-            // pictureBox1
+            // pcbShowStars1
             // 
-            pictureBox1.Image = Properties.Resources.whiteStar;
-            pictureBox1.Location = new Point(725, 140);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 41);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 31;
-            pictureBox1.TabStop = false;
+            pcbShowStars1.Image = Properties.Resources.whiteStar;
+            pcbShowStars1.Location = new Point(725, 140);
+            pcbShowStars1.Name = "pcbShowStars1";
+            pcbShowStars1.Size = new Size(40, 41);
+            pcbShowStars1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbShowStars1.TabIndex = 31;
+            pcbShowStars1.TabStop = false;
             // 
-            // pictureBox2
+            // pcbShowStars2
             // 
-            pictureBox2.Image = Properties.Resources.whiteStar;
-            pictureBox2.Location = new Point(771, 140);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 41);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 30;
-            pictureBox2.TabStop = false;
+            pcbShowStars2.Image = Properties.Resources.whiteStar;
+            pcbShowStars2.Location = new Point(771, 140);
+            pcbShowStars2.Name = "pcbShowStars2";
+            pcbShowStars2.Size = new Size(40, 41);
+            pcbShowStars2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbShowStars2.TabIndex = 30;
+            pcbShowStars2.TabStop = false;
             // 
-            // pictureBox3
+            // pcbShowStars3
             // 
-            pictureBox3.Image = Properties.Resources.whiteStar;
-            pictureBox3.Location = new Point(817, 140);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 41);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 29;
-            pictureBox3.TabStop = false;
+            pcbShowStars3.Image = Properties.Resources.whiteStar;
+            pcbShowStars3.Location = new Point(817, 140);
+            pcbShowStars3.Name = "pcbShowStars3";
+            pcbShowStars3.Size = new Size(40, 41);
+            pcbShowStars3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbShowStars3.TabIndex = 29;
+            pcbShowStars3.TabStop = false;
             // 
-            // pictureBox4
+            // pcbShowStars4
             // 
-            pictureBox4.Image = Properties.Resources.whiteStar;
-            pictureBox4.Location = new Point(863, 140);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 41);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 28;
-            pictureBox4.TabStop = false;
+            pcbShowStars4.Image = Properties.Resources.whiteStar;
+            pcbShowStars4.Location = new Point(863, 140);
+            pcbShowStars4.Name = "pcbShowStars4";
+            pcbShowStars4.Size = new Size(40, 41);
+            pcbShowStars4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbShowStars4.TabIndex = 28;
+            pcbShowStars4.TabStop = false;
             // 
-            // pictureBox5
+            // pcbShowStars5
             // 
-            pictureBox5.Image = Properties.Resources.whiteStar;
-            pictureBox5.Location = new Point(909, 140);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(40, 41);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 27;
-            pictureBox5.TabStop = false;
+            pcbShowStars5.Image = Properties.Resources.whiteStar;
+            pcbShowStars5.Location = new Point(909, 140);
+            pcbShowStars5.Name = "pcbShowStars5";
+            pcbShowStars5.Size = new Size(40, 41);
+            pcbShowStars5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbShowStars5.TabIndex = 27;
+            pcbShowStars5.TabStop = false;
             // 
             // txbShowWrittenReview
             // 
@@ -330,11 +330,11 @@
             BackColor = SystemColors.Control;
             ClientSize = new Size(970, 506);
             Controls.Add(txbShowUsername);
-            Controls.Add(pictureBox1);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox5);
+            Controls.Add(pcbShowStars1);
+            Controls.Add(pcbShowStars2);
+            Controls.Add(pcbShowStars3);
+            Controls.Add(pcbShowStars4);
+            Controls.Add(pcbShowStars5);
             Controls.Add(txbShowWrittenReview);
             Controls.Add(txbShowCompanyName);
             Controls.Add(lblShowUsername);
@@ -363,11 +363,11 @@
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarTwo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarOne).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbShowStars5).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -391,11 +391,11 @@
         private Label lblShowStars;
         private Label lblShowCompanyName;
         private Label lblShowUsername;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
+        private PictureBox pcbShowStars1;
+        private PictureBox pcbShowStars2;
+        private PictureBox pcbShowStars3;
+        private PictureBox pcbShowStars4;
+        private PictureBox pcbShowStars5;
         private TextBox txbShowWrittenReview;
         private TextBox txbShowCompanyName;
         private TextBox txbShowUsername;
