@@ -241,6 +241,7 @@
             ForeColor = SystemColors.ControlText;
             Name = "ReviewForm";
             Text = "Make a review";
+            Load += ReviewForm_Load;
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarFour).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).EndInit();

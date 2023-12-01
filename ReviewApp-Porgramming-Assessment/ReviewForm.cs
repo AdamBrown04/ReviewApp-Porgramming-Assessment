@@ -10,7 +10,7 @@ namespace ReviewApp_Porgramming_Assessment
         int userStarReview = 0;
         int textLength;
         string path = "reviews.txt";
-        
+
         public ReviewForm(User user)
         {
             InitializeComponent();
@@ -242,7 +242,7 @@ namespace ReviewApp_Porgramming_Assessment
                 txbCompanyName.Text = viewReview.ViewCompanyName();
                 txbWrittenReview.Text = viewReview.ViewWrittenReview();
                 userStarReview = viewReview.ViewStarRating();
-                
+
                 ShowStarRating();
 
                 currentReview = viewReview;
@@ -256,17 +256,17 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnUpdateReview_Click(object sender, EventArgs e)
         {
-            if(currentReview.ViewCompanyName() != txbCompanyName.Text)
+            if (currentReview.ViewCompanyName() != txbCompanyName.Text)
             {
                 currentReview.GetComapnyName(txbCompanyName.Text);
             }
-            
-            if(currentReview.ViewStarRating() != userStarReview)
+
+            if (currentReview.ViewStarRating() != userStarReview)
             {
                 currentReview.GetStarRating(userStarReview);
             }
 
-            if(currentReview.ViewWrittenReview() != txbWrittenReview.Text)
+            if (currentReview.ViewWrittenReview() != txbWrittenReview.Text)
             {
                 currentReview.GetWrittenReview(txbWrittenReview.Text);
             }
@@ -282,6 +282,35 @@ namespace ReviewApp_Porgramming_Assessment
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ReviewForm_Load(object sender, EventArgs e)
+        {
+            if (File.Exists(path))
+            {
+                string unsplitReview = File.ReadAllText(path);
+
+                string[] splitTheString = unsplitReview.Split(';', StringSplitOptions.RemoveEmptyEntries);
+
+                List<string> splitReview = new List<string>();
+
+                foreach (string item in splitTheString)
+                {
+                    splitReview.Add(item);
+                }
+
+                for(int x = 0; x<splitReview.Count; x += 4)
+                {
+                    Review loadReview = new Review();
+
+                    loadReview.GetUsername(splitReview[x]);
+                    loadReview.GetComapnyName(splitReview[x+1]);
+                    loadReview.GetStarRating(Convert.ToInt32(splitReview[x + 2]));
+                    loadReview.GetWrittenReview(splitReview[x + 3]);
+
+                    LsbViewReview.Items.Add(loadReview);
+                }
+            }
         }
     }
 }
