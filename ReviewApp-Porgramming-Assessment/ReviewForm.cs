@@ -8,11 +8,12 @@ namespace ReviewApp_Porgramming_Assessment
         int userStarReview = 0;
         int textLength;
         string path = "reviews.txt";
-
+        
         public ReviewForm(User user)
         {
             InitializeComponent();
             currentUser = user;
+            txbReviewerUsername.Text = currentUser.ViewUsername();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -230,38 +231,11 @@ namespace ReviewApp_Porgramming_Assessment
         {
             Review viewReview = LsbViewReview.SelectedItem as Review;
 
-            txbShowUsername.Text = viewReview.ViewUsername();
-            txbShowCompanyName.Text = viewReview.ViewCompanyName();
-            txbShowWrittenReview.Text = viewReview.ViewWrittenReview();
-
-            switch (viewReview.ViewStarRating())
-            {
-                case 1:
-                    pcbShowStars1.Image = Resources.yellowStar;
-                    break;
-                case 2:
-                    pcbShowStars1.Image = Resources.yellowStar;
-                    pcbShowStars2.Image = Resources.yellowStar;
-                    break;
-                case 3:
-                    pcbShowStars1.Image = Resources.yellowStar;
-                    pcbShowStars2.Image = Resources.yellowStar;
-                    pcbShowStars3.Image = Resources.yellowStar;
-                    break;
-                case 4:
-                    pcbShowStars1.Image = Resources.yellowStar;
-                    pcbShowStars2.Image = Resources.yellowStar;
-                    pcbShowStars3.Image = Resources.yellowStar;
-                    pcbShowStars4.Image = Resources.yellowStar;
-                    break;
-                case 5:
-                    pcbShowStars1.Image = Resources.yellowStar;
-                    pcbShowStars2.Image = Resources.yellowStar;
-                    pcbShowStars3.Image = Resources.yellowStar;
-                    pcbShowStars4.Image = Resources.yellowStar;
-                    pcbShowStars5.Image = Resources.yellowStar;
-                    break;
-            }
+            txbReviewerUsername.Text = viewReview.ViewUsername();
+            txbCompanyName.Text = viewReview.ViewCompanyName();
+            txbWrittenReview.Text = viewReview.ViewWrittenReview();
+            userStarReview = viewReview.ViewStarRating();
+            ShowStarRating();
 
             if (currentUser.ViewUsername() == viewReview.ViewUsername())
             {
