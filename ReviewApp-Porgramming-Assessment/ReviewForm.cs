@@ -228,13 +228,13 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void LsbViewReview_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Review ViewReview = LsbViewReview.SelectedItem as Review;
+            Review viewReview = LsbViewReview.SelectedItem as Review;
 
-            txbShowUsername.Text = ViewReview.ViewUsername();
-            txbShowCompanyName.Text = ViewReview.ViewCompanyName();
-            txbShowWrittenReview.Text = ViewReview.ViewWrittenReview();
+            txbShowUsername.Text = viewReview.ViewUsername();
+            txbShowCompanyName.Text = viewReview.ViewCompanyName();
+            txbShowWrittenReview.Text = viewReview.ViewWrittenReview();
 
-            switch (ViewReview.ViewStarRating())
+            switch (viewReview.ViewStarRating())
             {
                 case 1:
                     pcbShowStars1.Image = Resources.yellowStar;
@@ -262,15 +262,22 @@ namespace ReviewApp_Porgramming_Assessment
                     pcbShowStars5.Image = Resources.yellowStar;
                     break;
             }
+
+            if (currentUser.ViewUsername() == viewReview.ViewUsername())
+            {
+                btnUpdateReview.Visible = true;
+            }
         }
 
+        private void btnUpdateReview_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-
     }
 }
 

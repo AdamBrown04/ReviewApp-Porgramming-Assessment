@@ -322,6 +322,7 @@
             btnUpdateReview.Text = "Update review";
             btnUpdateReview.UseVisualStyleBackColor = true;
             btnUpdateReview.Visible = false;
+            btnUpdateReview.Click += btnUpdateReview_Click;
             // 
             // ReviewForm
             // 
