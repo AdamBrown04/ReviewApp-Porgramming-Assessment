@@ -16,7 +16,7 @@ namespace ReviewApp_Porgramming_Assessment
             InitializeComponent();
             currentUser = user;
         }
-
+        
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string writtenReview = txbWrittenReview.Text;
@@ -32,6 +32,7 @@ namespace ReviewApp_Porgramming_Assessment
 
                 string text = $"{newReview.ViewUsername()};{newReview.ViewCompanyName()};{newReview.ViewStarRating()};{newReview.ViewWrittenReview()};";
 
+                LsbViewReview.Items.Add(newReview);
                 File.AppendAllText(path, text);
 
                 ClearTextBoxes();
