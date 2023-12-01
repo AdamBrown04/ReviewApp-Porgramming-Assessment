@@ -39,7 +39,6 @@
             pcbStarThree = new PictureBox();
             pcbStarTwo = new PictureBox();
             pcbStarOne = new PictureBox();
-            btnViewReview = new Button();
             lblCharacterCount = new Label();
             LsbViewReview = new ListBox();
             lblShowWrittenReview = new Label();
@@ -54,6 +53,7 @@
             txbShowWrittenReview = new TextBox();
             txbShowCompanyName = new TextBox();
             txbShowUsername = new TextBox();
+            btnUpdateReview = new Button();
             ((System.ComponentModel.ISupportInitialize)pcbStarFive).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarFour).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbStarThree).BeginInit();
@@ -184,16 +184,6 @@
             pcbStarOne.MouseLeave += pcbStarOne_MouseLeave;
             pcbStarOne.MouseHover += pcbStarOne_MouseHover;
             // 
-            // btnViewReview
-            // 
-            btnViewReview.Location = new Point(9, 424);
-            btnViewReview.Name = "btnViewReview";
-            btnViewReview.Size = new Size(336, 67);
-            btnViewReview.TabIndex = 18;
-            btnViewReview.Text = "View review";
-            btnViewReview.UseVisualStyleBackColor = true;
-            btnViewReview.Click += btnViewReview_Click;
-            // 
             // lblCharacterCount
             // 
             lblCharacterCount.AutoSize = true;
@@ -209,7 +199,7 @@
             LsbViewReview.ItemHeight = 20;
             LsbViewReview.Location = new Point(368, 7);
             LsbViewReview.Name = "LsbViewReview";
-            LsbViewReview.Size = new Size(222, 484);
+            LsbViewReview.Size = new Size(222, 404);
             LsbViewReview.TabIndex = 20;
             LsbViewReview.SelectedIndexChanged += LsbViewReview_SelectedIndexChanged;
             // 
@@ -305,7 +295,7 @@
             txbShowWrittenReview.Location = new Point(725, 217);
             txbShowWrittenReview.Multiline = true;
             txbShowWrittenReview.Name = "txbShowWrittenReview";
-            txbShowWrittenReview.Size = new Size(224, 162);
+            txbShowWrittenReview.Size = new Size(224, 121);
             txbShowWrittenReview.TabIndex = 26;
             // 
             // txbShowCompanyName
@@ -323,12 +313,23 @@
             txbShowUsername.Size = new Size(224, 27);
             txbShowUsername.TabIndex = 32;
             // 
+            // btnUpdateReview
+            // 
+            btnUpdateReview.Location = new Point(616, 349);
+            btnUpdateReview.Name = "btnUpdateReview";
+            btnUpdateReview.Size = new Size(336, 67);
+            btnUpdateReview.TabIndex = 33;
+            btnUpdateReview.Text = "Update review";
+            btnUpdateReview.UseVisualStyleBackColor = true;
+            btnUpdateReview.Visible = false;
+            // 
             // ReviewForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(970, 506);
+            ClientSize = new Size(970, 428);
+            Controls.Add(btnUpdateReview);
             Controls.Add(txbShowUsername);
             Controls.Add(pcbShowStars1);
             Controls.Add(pcbShowStars2);
@@ -343,7 +344,6 @@
             Controls.Add(lblShowCompanyName);
             Controls.Add(LsbViewReview);
             Controls.Add(lblCharacterCount);
-            Controls.Add(btnViewReview);
             Controls.Add(pcbStarOne);
             Controls.Add(pcbStarTwo);
             Controls.Add(pcbStarThree);
@@ -384,7 +384,6 @@
         private PictureBox pcbStarThree;
         private PictureBox pcbStarTwo;
         private PictureBox pcbStarOne;
-        private Button btnViewReview;
         private Label lblCharacterCount;
         private ListBox LsbViewReview;
         private Label lblShowWrittenReview;
@@ -399,5 +398,6 @@
         private TextBox txbShowWrittenReview;
         private TextBox txbShowCompanyName;
         private TextBox txbShowUsername;
+        private Button btnUpdateReview;
     }
 }

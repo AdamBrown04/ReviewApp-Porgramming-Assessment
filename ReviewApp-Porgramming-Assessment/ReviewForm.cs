@@ -49,40 +49,6 @@ namespace ReviewApp_Porgramming_Assessment
             }
 
         }
-        private void btnViewReview_Click(object sender, EventArgs e)
-        {
-            txbCompanyName.Text = currentReview.ViewCompanyName();
-            txbWrittenReview.Text = currentReview.ViewWrittenReview();
-            switch (currentReview.ViewStarRating())
-            {
-                case 1:
-                    pcbStarOne.Image = Resources.yellowStar;
-                    break;
-                case 2:
-                    pcbStarOne.Image = Resources.yellowStar;
-                    pcbStarTwo.Image = Resources.yellowStar;
-                    break;
-                case 3:
-                    pcbStarOne.Image = Resources.yellowStar;
-                    pcbStarTwo.Image = Resources.yellowStar;
-                    pcbStarThree.Image = Resources.yellowStar;
-                    break;
-                case 4:
-                    pcbStarOne.Image = Resources.yellowStar;
-                    pcbStarTwo.Image = Resources.yellowStar;
-                    pcbStarThree.Image = Resources.yellowStar;
-                    pcbStarFour.Image = Resources.yellowStar;
-                    break;
-                case 5:
-                    pcbStarOne.Image = Resources.yellowStar;
-                    pcbStarTwo.Image = Resources.yellowStar;
-                    pcbStarThree.Image = Resources.yellowStar;
-                    pcbStarFour.Image = Resources.yellowStar;
-                    pcbStarFive.Image = Resources.yellowStar;
-                    break;
-            }
-
-        }
         private void txbWrittenReview_TextChanged(object sender, EventArgs e)
         {
             textLength = txbWrittenReview.Text.Length;
@@ -267,6 +233,35 @@ namespace ReviewApp_Porgramming_Assessment
             txbShowUsername.Text = ViewReview.ViewUsername();
             txbShowCompanyName.Text = ViewReview.ViewCompanyName();
             txbShowWrittenReview.Text = ViewReview.ViewWrittenReview();
+
+            switch (ViewReview.ViewStarRating())
+            {
+                case 1:
+                    pcbShowStars1.Image = Resources.yellowStar;
+                    break;
+                case 2:
+                    pcbShowStars1.Image = Resources.yellowStar;
+                    pcbShowStars2.Image = Resources.yellowStar;
+                    break;
+                case 3:
+                    pcbShowStars1.Image = Resources.yellowStar;
+                    pcbShowStars2.Image = Resources.yellowStar;
+                    pcbShowStars3.Image = Resources.yellowStar;
+                    break;
+                case 4:
+                    pcbShowStars1.Image = Resources.yellowStar;
+                    pcbShowStars2.Image = Resources.yellowStar;
+                    pcbShowStars3.Image = Resources.yellowStar;
+                    pcbShowStars4.Image = Resources.yellowStar;
+                    break;
+                case 5:
+                    pcbShowStars1.Image = Resources.yellowStar;
+                    pcbShowStars2.Image = Resources.yellowStar;
+                    pcbShowStars3.Image = Resources.yellowStar;
+                    pcbShowStars4.Image = Resources.yellowStar;
+                    pcbShowStars5.Image = Resources.yellowStar;
+                    break;
+            }
         }
 
 
