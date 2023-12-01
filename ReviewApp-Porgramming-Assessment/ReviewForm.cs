@@ -4,7 +4,9 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class ReviewForm : Form //form2
     {
+        Review currentReview;
         User currentUser;
+        int currentIndex = -1;
         int userStarReview = 0;
         int textLength;
         string path = "reviews.txt";
@@ -27,6 +29,8 @@ namespace ReviewApp_Porgramming_Assessment
                 newReview.GetComapnyName(txbCompanyName.Text);
                 newReview.GetStarRating(userStarReview);
                 newReview.GetWrittenReview(txbWrittenReview.Text);
+
+                currentReview = newReview;
 
                 string text = $"{newReview.ViewUsername()};{newReview.ViewCompanyName()};{newReview.ViewStarRating()};{newReview.ViewWrittenReview()};";
 
@@ -235,7 +239,10 @@ namespace ReviewApp_Porgramming_Assessment
             txbCompanyName.Text = viewReview.ViewCompanyName();
             txbWrittenReview.Text = viewReview.ViewWrittenReview();
             userStarReview = viewReview.ViewStarRating();
+            currentIndex = LsbViewReview.SelectedIndex;
             ShowStarRating();
+
+            currentReview = viewReview;
 
             if (currentUser.ViewUsername() == viewReview.ViewUsername())
             {
@@ -245,7 +252,24 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void btnUpdateReview_Click(object sender, EventArgs e)
         {
+            if(currentReview.ViewCompanyName() != txbCompanyName.Text)
+            {
+                currentReview.GetComapnyName(txbCompanyName.Text);
+            }
+            
+            if(currentReview.ViewStarRating() != userStarReview)
+            {
+                currentReview.GetStarRating(userStarReview);
+            }
 
+            if(currentReview.ViewWrittenReview() != txbWrittenReview.Text)
+            {
+                currentReview.GetWrittenReview(txbWrittenReview.Text);
+            }
+
+            ClearStarBoxes();
+            ClearTextBoxes();
+            LsbViewReview.Items.
         }
 
         private void label1_Click(object sender, EventArgs e)
