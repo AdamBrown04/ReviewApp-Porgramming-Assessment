@@ -233,20 +233,24 @@ namespace ReviewApp_Porgramming_Assessment
 
         private void LsbViewReview_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Review viewReview = LsbViewReview.SelectedItem as Review;
-
-            txbReviewerUsername.Text = viewReview.ViewUsername();
-            txbCompanyName.Text = viewReview.ViewCompanyName();
-            txbWrittenReview.Text = viewReview.ViewWrittenReview();
-            userStarReview = viewReview.ViewStarRating();
             currentIndex = LsbViewReview.SelectedIndex;
-            ShowStarRating();
-
-            currentReview = viewReview;
-
-            if (currentUser.ViewUsername() == viewReview.ViewUsername())
+            if (currentIndex != -1)
             {
-                btnUpdateReview.Visible = true;
+                Review viewReview = LsbViewReview.SelectedItem as Review;
+
+                txbReviewerUsername.Text = viewReview.ViewUsername();
+                txbCompanyName.Text = viewReview.ViewCompanyName();
+                txbWrittenReview.Text = viewReview.ViewWrittenReview();
+                userStarReview = viewReview.ViewStarRating();
+                
+                ShowStarRating();
+
+                currentReview = viewReview;
+
+                if (currentUser.ViewUsername() == viewReview.ViewUsername())
+                {
+                    btnUpdateReview.Visible = true;
+                }
             }
         }
 
@@ -269,7 +273,10 @@ namespace ReviewApp_Porgramming_Assessment
 
             ClearStarBoxes();
             ClearTextBoxes();
-            LsbViewReview.Items.
+            LsbViewReview.Items.RemoveAt(currentIndex);
+            LsbViewReview.Items.Add(currentReview);
+
+            currentIndex = -1;
         }
 
         private void label1_Click(object sender, EventArgs e)
