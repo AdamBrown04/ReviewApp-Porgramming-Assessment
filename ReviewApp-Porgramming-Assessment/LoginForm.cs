@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
@@ -10,14 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 //need to add proof of testing and add comments when needed
 namespace ReviewApp_Porgramming_Assessment
 {
     public partial class LoginForm : Form //form1
     {
+        //vairables for user login data
         string path = "users.txt";
         List<string> allLogins = new List<string>();
-
+        //vairables used for checking the data from file
         bool isUsernameCorrect = false;
         int userID = -1;
         public LoginForm()
@@ -25,6 +28,7 @@ namespace ReviewApp_Porgramming_Assessment
             InitializeComponent();
         }
 
+        //function used to see if login details entered a valid on the system
         private void btnLogin_Click(object sender, EventArgs e)
         {
             User newUser = new User();
@@ -51,6 +55,7 @@ namespace ReviewApp_Porgramming_Assessment
                 }
             }
         }
+        //function used to allow users to create a new account with a unique username
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             isUsernameCorrect = false;
@@ -77,12 +82,15 @@ namespace ReviewApp_Porgramming_Assessment
                     "\n        Username and password are required");
             }
         }
+
+        //function to remove data from text boxes
         private void ClearAllTextBoxes()
         {
             txbUsername.Clear();
             txbPassword.Clear();
         }
 
+        //function that is used to find the inputed username in the current data set, sets a boolean global vairbale depending on result
         private void FindUsername(string inputUsername)
         {
             string unsplitUserDetails = File.ReadAllText(path);

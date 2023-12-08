@@ -4,20 +4,27 @@ namespace ReviewApp_Porgramming_Assessment
 {
     public partial class ReviewForm : Form //form2
     {
+        //The classes are used to be able to store an instance of a class to allow multiple instances to exist at once
         Review currentReview;
         User currentUser;
+        //these vairables are global for use throughout multiple functions
         int currentIndex = -1;
         int userStarReview = 0;
         int textLength;
+        //This vairable stores the file path for the data on reviews made previously
         string path = "reviews.txt";
 
         public ReviewForm(User user)
         {
             InitializeComponent();
+            /*this line transfers the data of the current user from the login form to the review form, this is 
+            to check the username against the username of reviews and to store the current users username when making
+            a review*/
             currentUser = user;
             txbReviewerUsername.Text = currentUser.ViewUsername();
         }
 
+        //this function checks if the data input is valid then if it is, the data will be written to the file
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string writtenReview = txbWrittenReview.Text;
@@ -54,17 +61,20 @@ namespace ReviewApp_Porgramming_Assessment
             }
 
         }
+        //this function updates when text is inputted into the txbWrittenReview text box then updates the label lblCharcterCount
         private void txbWrittenReview_TextChanged(object sender, EventArgs e)
         {
             textLength = txbWrittenReview.Text.Length;
             lblCharacterCount.Text = $"{textLength}/256";
         }
+        //this function removes all text from text boxes that the user can input data into
         private void ClearTextBoxes()
         {
             txbCompanyName.Clear();
             txbWrittenReview.Clear();
         }
 
+        //this function resets all the picture boxes back to the starting image
         private void ClearStarBoxes()
         {
             pcbStarOne.Image = Resources.whiteStar;
@@ -74,6 +84,7 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarFive.Image = Resources.whiteStar;
         }
 
+        //these five functions set the vairable userStarReview to a different value then runs the function ShowStarRating
         private void pcbStarFive_Click(object sender, EventArgs e)
         {
             userStarReview = 5;
@@ -104,6 +115,7 @@ namespace ReviewApp_Porgramming_Assessment
             ShowStarRating();
         }
 
+        //the functions bellow will change the state of the picture boxes when hovering over
         private void pcbStarFive_MouseHover(object sender, EventArgs e)
         {
             pcbStarOne.Image = Resources.yellowStar;
@@ -152,7 +164,7 @@ namespace ReviewApp_Porgramming_Assessment
             pcbStarFour.Image = Resources.whiteStar;
             pcbStarFive.Image = Resources.whiteStar;
         }
-
+        //these fucntions will show the picture boxes based on what the current value of userStarReview using the function ShowStarRating
         private void pcbStarFive_MouseLeave(object sender, EventArgs e)
         {
             ShowStarRating();
@@ -177,6 +189,8 @@ namespace ReviewApp_Porgramming_Assessment
         {
             ShowStarRating();
         }
+
+        //this function will take the global vairable userStarRating and use a switch case to display the correct image in the picture boxes
         private void ShowStarRating()
         {
             switch (userStarReview)
@@ -230,7 +244,7 @@ namespace ReviewApp_Porgramming_Assessment
             }
 
         }
-
+        //this function displays preivously created reviews to the user when selected from the listbox called lsbViewReview
         private void LsbViewReview_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentIndex = LsbViewReview.SelectedIndex;
@@ -246,14 +260,14 @@ namespace ReviewApp_Porgramming_Assessment
                 ShowStarRating();
 
                 currentReview = viewReview;
-
+                //this if statement checks if the current user and the user who set the review are the same, if so it will allow them to make changes to their old reviews
                 if (currentUser.ViewUsername() == viewReview.ViewUsername())
                 {
                     btnUpdateReview.Visible = true;
                 }
             }
         }
-
+        //this function will allow the user to update a preivous review they have set, only changing the data stored if the input data has changed
         private void btnUpdateReview_Click(object sender, EventArgs e)
         {
             if (currentReview.ViewCompanyName() != txbCompanyName.Text)
@@ -279,6 +293,7 @@ namespace ReviewApp_Porgramming_Assessment
             currentIndex = -1;
         }
 
+        //this function will run when the form is loaded, it will store the data from the file as a class and then store it in the listbox
         private void ReviewForm_Load(object sender, EventArgs e)
         {
             if (File.Exists(path))
@@ -308,6 +323,7 @@ namespace ReviewApp_Porgramming_Assessment
             }
         }
 
+        //this function will close the program when the review form is closed
         private void ReviewForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
