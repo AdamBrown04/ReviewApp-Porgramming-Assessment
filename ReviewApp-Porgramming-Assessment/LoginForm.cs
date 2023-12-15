@@ -26,6 +26,7 @@ namespace ReviewApp_Porgramming_Assessment
         public LoginForm()
         {
             InitializeComponent();
+            RunTests(); //runs a set of tests to ensure that the class runs correctly before the user tries it
         }
 
         //function used to see if login details entered a valid on the system
@@ -111,6 +112,15 @@ namespace ReviewApp_Porgramming_Assessment
                     break;
                 }
             }
+        }
+
+        private void RunTests() //a set of tests to see if all data is saved correctly to the User class
+        {
+            User testUser = new User();
+            testUser.GetUsername("user1");
+            Debug.Assert(testUser.ViewUsername() == "user1");
+            testUser.GetPassword("Password");
+            Debug.Assert(testUser.ViewPassword() == "Password");
         }
     }
 }

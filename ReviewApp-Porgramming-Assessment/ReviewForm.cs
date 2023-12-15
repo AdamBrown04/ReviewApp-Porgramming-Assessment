@@ -1,4 +1,5 @@
 using ReviewApp_Porgramming_Assessment.Properties;
+using System.Diagnostics;
 
 namespace ReviewApp_Porgramming_Assessment
 {
@@ -22,6 +23,7 @@ namespace ReviewApp_Porgramming_Assessment
             a review*/
             currentUser = user;
             txbReviewerUsername.Text = currentUser.ViewUsername();
+            RunTests(); //runs a set of tests to ensure that the class runs correctly before the user tries it
         }
 
         //this function checks if the data input is valid then if it is, the data will be written to the file
@@ -51,6 +53,7 @@ namespace ReviewApp_Porgramming_Assessment
             else if (userStarReview == 0)
             {
                 MessageBox.Show("Please enter a star rating");
+                
             }
             else if (writtenReview.Length > 256)
             {
@@ -327,6 +330,19 @@ namespace ReviewApp_Porgramming_Assessment
         private void ReviewForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void RunTests() //a set of tests to see if the Review class works correctly
+        {
+            Review testReview = new Review();
+            testReview.GetUsername("user");
+            Debug.Assert(testReview.ViewUsername() == "user");
+            testReview.GetComapnyName("company");
+            Debug.Assert(testReview.ViewCompanyName() == "company");
+            testReview.GetStarRating(3);
+            Debug.Assert(testReview.ViewStarRating() == 3);
+            testReview.GetWrittenReview("test text");
+            Debug.Assert(testReview.ViewWrittenReview() == "test text");
         }
     }
 }
